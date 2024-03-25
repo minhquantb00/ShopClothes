@@ -1,0 +1,17 @@
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\bin\Debug\net6.0\ShopClothes.Infrastructure.deps.json
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\bin\Debug\net6.0\ShopClothes.Infrastructure.runtimeconfig.json
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\bin\Debug\net6.0\ShopClothes.Infrastructure.dll
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\bin\Debug\net6.0\ShopClothes.Infrastructure.pdb
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\bin\Debug\net6.0\ShopClothes.Domain.dll
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\bin\Debug\net6.0\ShopClothes.Domain.pdb
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.AssemblyInfo.cs
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClot.62C7AE88.Up2Date
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.dll
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\refint\ShopClothes.Infrastructure.dll
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.pdb
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ShopClothes.Infrastructure.genruntimeconfig.cache
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Infrastructure\obj\Debug\net6.0\ref\ShopClothes.Infrastructure.dll

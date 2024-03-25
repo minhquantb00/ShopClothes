@@ -1,0 +1,12 @@
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\bin\Debug\net6.0\ShopClothes.Domain.deps.json
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\bin\Debug\net6.0\ShopClothes.Domain.dll
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\bin\Debug\net6.0\ShopClothes.Domain.pdb
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ShopClothes.Domain.csproj.AssemblyReference.cache
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ShopClothes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ShopClothes.Domain.AssemblyInfoInputs.cache
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ShopClothes.Domain.AssemblyInfo.cs
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ShopClothes.Domain.csproj.CoreCompileInputs.cache
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ShopClothes.Domain.dll
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\refint\ShopClothes.Domain.dll
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ShopClothes.Domain.pdb
+C:\Users\viett\source\repos\ShopClothes.Api\ShopClothes.Domain\obj\Debug\net6.0\ref\ShopClothes.Domain.dll

@@ -1,0 +1,1009 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecaseoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecaseoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\eventproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\eventproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.infrastructure\\implementrepositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|solutionrelative:shopclothes.infrastructure\\implementrepositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecaseinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecaseinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.infrastructure\\datacontexts\\shopclothesdbcontextseeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|solutionrelative:shopclothes.infrastructure\\datacontexts\\shopclothesdbcontextseeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.infrastructure\\datacontexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|solutionrelative:shopclothes.infrastructure\\datacontexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.infrastructure\\datacontexts\\idbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|solutionrelative:shopclothes.infrastructure\\datacontexts\\idbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\validates\\validatevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\validates\\validatevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BC6E504-2F5F-44FA-AFA2-A6E1E56535EA}|ShopClothes.Api\\ShopClothes.Api.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BC6E504-2F5F-44FA-AFA2-A6E1E56535EA}|ShopClothes.Api\\ShopClothes.Api.csproj|solutionrelative:shopclothes.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\constants\\roleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\constants\\roleconstant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\interfacerepositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\interfacerepositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registerusermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registerusermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\usecases\\implements\\usecaseoutputbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\usecases\\implements\\usecaseoutputbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\shopclothes.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\shopclothes.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BC6E504-2F5F-44FA-AFA2-A6E1E56535EA}|ShopClothes.Api\\ShopClothes.Api.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.api\\shopclothes.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2BC6E504-2F5F-44FA-AFA2-A6E1E56535EA}|ShopClothes.Api\\ShopClothes.Api.csproj|solutionrelative:shopclothes.api\\shopclothes.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecaseinputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\usecases\\implements\\user_usecase\\registeruser\\registeruserusecaseinputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.application\\usecases\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B27AE54-F1E1-49E2-8565-BCD9E0929964}|ShopClothes.Application\\ShopClothes.Application.csproj|solutionrelative:shopclothes.application\\usecases\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BC6E504-2F5F-44FA-AFA2-A6E1E56535EA}|ShopClothes.Api\\ShopClothes.Api.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2BC6E504-2F5F-44FA-AFA2-A6E1E56535EA}|ShopClothes.Api\\ShopClothes.Api.csproj|solutionrelative:shopclothes.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.infrastructure\\datacontexts\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|solutionrelative:shopclothes.infrastructure\\datacontexts\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\confirmemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\confirmemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\uservoucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\uservoucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\size.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\size.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\shippingmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\shippingmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\rankcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\rankcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\productreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\productreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\favoriteproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\favoriteproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\discountevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\discountevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\billdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\billdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\addressstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\addressstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\billdetailstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\billdetailstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\billstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\billstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\uservoucherstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\uservoucherstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\paymentmethodstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\paymentmethodstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\shippingmethodstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\shippingmethodstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\productdetailstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\productdetailstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\productstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\productstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\discounteventenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\discounteventenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\voucherenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\voucherenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\userstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\userstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.domain\\enumerates\\genderenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7696A8C0-A6C8-499A-8497-BF77164A407A}|ShopClothes.Domain\\ShopClothes.Domain.csproj|solutionrelative:shopclothes.domain\\enumerates\\genderenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|c:\\users\\viett\\source\\repos\\shopclothes.api\\shopclothes.infrastructure\\migrations\\20240324092846_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F5553C-B261-475D-9A24-A5B77EEBD38F}|ShopClothes.Infrastructure\\ShopClothes.Infrastructure.csproj|solutionrelative:shopclothes.infrastructure\\migrations\\20240324092846_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterUserUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCase.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCase.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCase.cs",
+              "RelativeToolTip": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCase.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAnwC8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:48:27.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\ImplementRepositories\\Repository.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Infrastructure\\ImplementRepositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\ImplementRepositories\\Repository.cs",
+              "RelativeToolTip": "ShopClothes.Infrastructure\\ImplementRepositories\\Repository.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAiwGkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T06:46:42.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\User.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:24:28.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterUserUseCaseInput.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInput.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInput.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInput.cs",
+              "RelativeToolTip": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInput.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:48:56.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShopClothesDbContextSeeding.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\ShopClothesDbContextSeeding.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Infrastructure\\DataContexts\\ShopClothesDbContextSeeding.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\ShopClothesDbContextSeeding.cs",
+              "RelativeToolTip": "ShopClothes.Infrastructure\\DataContexts\\ShopClothesDbContextSeeding.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T04:03:23.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventProduct.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\EventProduct.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\EventProduct.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\EventProduct.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\EventProduct.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T12:00:30.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterUserUseCaseOutput.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseOutput.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseOutput.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseOutput.cs",
+              "RelativeToolTip": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseOutput.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:49:50.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\UserRole.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\UserRole.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\UserRole.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\UserRole.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:34:27.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Api\\Program.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Api\\Program.cs",
+              "RelativeToolTip": "ShopClothes.Api\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAIBJwDkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:24:56.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\InterfaceRepositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\InterfaceRepositories\\IRepository.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\InterfaceRepositories\\IRepository.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\InterfaceRepositories\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T06:37:35.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterUserMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserMappingProfile.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserMappingProfile.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserMappingProfile.cs",
+              "RelativeToolTip": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T10:28:38.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\IDbContext.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Infrastructure\\DataContexts\\IDbContext.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\IDbContext.cs",
+              "RelativeToolTip": "ShopClothes.Infrastructure\\DataContexts\\IDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T07:59:12.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Infrastructure\\DataContexts\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\AppDbContext.cs",
+              "RelativeToolTip": "ShopClothes.Infrastructure\\DataContexts\\AppDbContext.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAIAxwCQAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T03:23:53.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ValidateValue.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Validates\\ValidateValue.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Validates\\ValidateValue.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Validates\\ValidateValue.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Validates\\ValidateValue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T11:23:01.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UseCaseOutputBase.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\UseCaseOutputBase.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\UseCases\\Implements\\UseCaseOutputBase.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\UseCaseOutputBase.cs",
+              "RelativeToolTip": "ShopClothes.Application\\UseCases\\Implements\\UseCaseOutputBase.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAowAwAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T10:11:36.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoleConstant.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Constants\\RoleConstant.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Constants\\RoleConstant.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Constants\\RoleConstant.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Constants\\RoleConstant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T05:08:26.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ShopClothes.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\ShopClothes.Application.csproj",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\ShopClothes.Application.csproj",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\ShopClothes.Application.csproj",
+              "RelativeToolTip": "ShopClothes.Application\\ShopClothes.Application.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-24T10:57:38.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ShopClothes.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Api\\ShopClothes.Api.csproj",
+              "RelativeDocumentMoniker": "ShopClothes.Api\\ShopClothes.Api.csproj",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Api\\ShopClothes.Api.csproj",
+              "RelativeToolTip": "ShopClothes.Api\\ShopClothes.Api.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-24T10:56:38.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RegisterUserUseCaseInputValidator.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInputValidator.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInputValidator.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInputValidator.cs",
+              "RelativeToolTip": "ShopClothes.Application\\UseCases\\Implements\\User_UseCase\\RegisterUser\\RegisterUserUseCaseInputValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:49:31.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\IUseCase.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Application\\UseCases\\IUseCase.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Application\\UseCases\\IUseCase.cs",
+              "RelativeToolTip": "ShopClothes.Application\\UseCases\\IUseCase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:39:38.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "20240324092846_initial.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\Migrations\\20240324092846_initial.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Infrastructure\\Migrations\\20240324092846_initial.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\Migrations\\20240324092846_initial.cs",
+              "RelativeToolTip": "ShopClothes.Infrastructure\\Migrations\\20240324092846_initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T09:28:47.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "ShopClothes.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Api\\appsettings.json",
+              "RelativeToolTip": "ShopClothes.Api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-24T09:16:59.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IAppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\IAppDbContext.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Infrastructure\\DataContexts\\IAppDbContext.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Infrastructure\\DataContexts\\IAppDbContext.cs",
+              "RelativeToolTip": "ShopClothes.Infrastructure\\DataContexts\\IAppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T08:00:47.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Bill.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Bill.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Bill.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Bill.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwB4AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:58:51.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\RefreshToken.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\RefreshToken.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\RefreshToken.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T03:48:43.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ConfirmEmail.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ConfirmEmail.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\ConfirmEmail.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ConfirmEmail.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\ConfirmEmail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T03:47:33.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ProductType.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductType.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\ProductType.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductType.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\ProductType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:49:32.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RankCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\RankCustomer.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\RankCustomer.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\RankCustomer.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\RankCustomer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:38:06.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Role.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Role.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:35:30.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ShippingMethod.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ShippingMethod.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\ShippingMethod.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ShippingMethod.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\ShippingMethod.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:15:23.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Address.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Address.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Address.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Address.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAIwBkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:30:18.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProductReview.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductReview.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\ProductReview.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductReview.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\ProductReview.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:40:28.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Size.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Size.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Size.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Size.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Size.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:57:07.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserVoucher.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\UserVoucher.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\UserVoucher.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\UserVoucher.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\UserVoucher.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwA8AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:50:42.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Voucher.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Voucher.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Voucher.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Voucher.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Voucher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:42:19.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProductImage.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductImage.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\ProductImage.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductImage.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\ProductImage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T13:19:25.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProductDetail.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductDetail.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\ProductDetail.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\ProductDetail.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\ProductDetail.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA2wBcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:22:55.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Product.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA3wBQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T12:04:21.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\PaymentMethod.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\PaymentMethod.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\PaymentMethod.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:46:08.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "FavoriteProduct.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\FavoriteProduct.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\FavoriteProduct.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\FavoriteProduct.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\FavoriteProduct.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:58:48.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DiscountEvent.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\DiscountEvent.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\DiscountEvent.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\DiscountEvent.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\DiscountEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:52:42.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Color.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Color.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Color.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Color.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Color.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:55:16.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Cart.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\Cart.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\Cart.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:28:42.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "BillDetail.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\BillDetail.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\BillDetail.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\BillDetail.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\BillDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:16:52.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AddressStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\AddressStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\AddressStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\AddressStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\AddressStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:36:07.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "BillDetailStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\BillDetailStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\BillDetailStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\BillDetailStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\BillDetailStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:26:12.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "BillStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\BillStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\BillStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\BillStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\BillStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:04:19.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UserVoucherStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\UserVoucherStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\UserVoucherStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\UserVoucherStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\UserVoucherStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:52:51.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "PaymentMethodStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\PaymentMethodStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\PaymentMethodStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\PaymentMethodStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\PaymentMethodStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:47:13.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ShippingMethodStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\ShippingMethodStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\ShippingMethodStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\ShippingMethodStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\ShippingMethodStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:42:55.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ProductDetailStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\ProductDetailStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\ProductDetailStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\ProductDetailStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\ProductDetailStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:28:57.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:25:00.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ProductStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\ProductStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\ProductStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\ProductStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\ProductStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T13:12:53.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "DiscountEventEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\DiscountEventEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\DiscountEventEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\DiscountEventEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\DiscountEventEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:56:10.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "VoucherEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\VoucherEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\VoucherEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\VoucherEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\VoucherEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:46:15.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UserStatusEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\UserStatusEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\UserStatusEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\UserStatusEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\UserStatusEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:30:29.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "GenderEnum.cs",
+              "DocumentMoniker": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\GenderEnum.cs",
+              "RelativeDocumentMoniker": "ShopClothes.Domain\\Enumerates\\GenderEnum.cs",
+              "ToolTip": "C:\\Users\\viett\\source\\repos\\ShopClothes.Api\\ShopClothes.Domain\\Enumerates\\GenderEnum.cs",
+              "RelativeToolTip": "ShopClothes.Domain\\Enumerates\\GenderEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T11:27:29.163Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
