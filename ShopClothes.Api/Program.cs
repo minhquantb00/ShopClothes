@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser;
+using ShopClothes.Domain.InterfaceRepositories;
 using ShopClothes.Infrastructure.DataContexts;
 using System.Text;
 
@@ -52,7 +53,10 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
     };
 });
-//builder.Services.AddAutoMapper(typeof(RegisterUserUseCaseInput));
+
+
+
+//builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

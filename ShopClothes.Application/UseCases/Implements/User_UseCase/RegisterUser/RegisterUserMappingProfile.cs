@@ -14,19 +14,5 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
         {
             CreateMap<RegisterUserUseCaseInput, User>();
         }
-        public static RegisterUserUseCaseOutput EntityToDTO(User user)
-        {
-            return new RegisterUserUseCaseOutput
-            {
-                AvatarUrl = user.AvatarUrl,
-                CreateTime = user.CreateTime,
-                Email = user.Email,
-                FullName = user.FullName,
-                Gender = user.Gender.ToString(),
-                PhoneNumber = user.PhoneNumber,
-                UserName = user.UserName,
-                UserStatus = user.UserStatus.ToString()
-            };
-        }
     }
 }
