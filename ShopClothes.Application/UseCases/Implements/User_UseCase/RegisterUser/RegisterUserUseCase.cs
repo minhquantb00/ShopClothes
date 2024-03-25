@@ -21,7 +21,7 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
         {
             var resultOutput = new RegisterUserUseCaseOutput
             {
-                Succeeded = false
+                Succeeded = false,
             };
             if(ValidateValue.IsValidEmail(input.Email))
             {
@@ -45,7 +45,14 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
                 PhoneNumber = input.PhoneNumber,
                 UserStatus = Domain.Enumerates.UserStatusEnum.UnActivated
             };
-            await _userRepository.CreateAsync(user);
+            User newUser =  await _userRepository.CreateAsync(user);
+            if(newUser != null)
+            {
+                await _userRepository.AddUserToRoleAsync(newUser, input.Roles);
+                resultOutput.Succeeded = true;
+            }
+            resultOutput.Errors = new string[] { "User registration failed" };
+            return resultOutput;
         }
     }
 }

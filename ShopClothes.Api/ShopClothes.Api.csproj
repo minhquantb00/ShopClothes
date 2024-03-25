@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ShopClothes.Application\ShopClothes.Application.csproj" />
     <ProjectReference Include="..\ShopClothes.Infrastructure\ShopClothes.Infrastructure.csproj" />
   </ItemGroup>
