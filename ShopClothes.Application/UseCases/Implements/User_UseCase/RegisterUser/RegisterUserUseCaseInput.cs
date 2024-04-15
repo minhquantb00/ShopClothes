@@ -1,11 +1,15 @@
-﻿using ShopClothes.Domain.Entities;
+﻿using Newtonsoft.Json;
+using ShopClothes.Domain.Entities;
 using ShopClothes.Domain.Enumerates;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using JsonConverter = Newtonsoft.Json.JsonConverter;
+using JsonConverterAttribute = System.Text.Json.Serialization.JsonConverterAttribute;
 
 namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
 {
@@ -23,8 +27,8 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
         [Required(ErrorMessage = "PhoneNumber is required")]
         public string PhoneNumber { get; set; }
         [Required(ErrorMessage = "Gender is required")]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public GenderEnum Gender { get; set; } = GenderEnum.Unknown;
         [Required(ErrorMessage = "Roles is required")]
-        public List<string> Roles { get; set; }
     }
 }

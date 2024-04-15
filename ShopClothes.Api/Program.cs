@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ShopClothes.Application.UseCases;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser;
+using ShopClothes.Domain.Entities;
 using ShopClothes.Domain.InterfaceRepositories;
 using ShopClothes.Infrastructure.DataContexts;
+using ShopClothes.Infrastructure.ImplementRepositories;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +20,9 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 
-
+builder.Services.AddScoped<IUseCase<RegisterUserUseCaseInput, RegisterUserUseCaseOutput>, RegisterUserUseCase>();
+builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+builder.Services.AddScoped<IDbContext, AppDbContext>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigin", builder =>

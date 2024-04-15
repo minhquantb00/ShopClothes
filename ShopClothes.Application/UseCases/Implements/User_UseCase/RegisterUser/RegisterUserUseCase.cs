@@ -23,12 +23,12 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
             {
                 Succeeded = false,
             };
-            if(ValidateValue.IsValidEmail(input.Email))
+            if(!ValidateValue.IsValidEmail(input.Email))
             {
                 resultOutput.Errors = new string[] { $"Invalid email format" };
                 return resultOutput;
             }
-            if(ValidateValue.IsValidPhoneNumber(input.PhoneNumber))
+            if(!ValidateValue.IsValidPhoneNumber(input.PhoneNumber))
             {
                 resultOutput.Errors = new string[] { $"Invalid phone number format" };
                 return resultOutput;
@@ -45,11 +45,12 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
                 PhoneNumber = input.PhoneNumber,
                 UserStatus = Domain.Enumerates.UserStatusEnum.UnActivated
             };
-            User newUser =  await _userRepository.CreateAsync(user);
-            if(newUser != null)
+            user =  await _userRepository.CreateAsync(user);
+            if(user.Id != null && user.Id != 0)
             {
-                await _userRepository.AddUserToRoleAsync(newUser, input.Roles);
+                await _userRepository.AddUserToRoleAsync(user, new string[] {"User"});
                 resultOutput.Succeeded = true;
+                return resultOutput;
             }
             resultOutput.Errors = new string[] { "User registration failed" };
             return resultOutput;

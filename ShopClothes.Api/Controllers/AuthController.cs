@@ -15,7 +15,7 @@ namespace ShopClothes.Api.Controllers
             _serviceProvider = serviceProvider;
         }
         [HttpPost("Register")]
-        public async Task<IActionResult> Register([FromBody] RegisterUserUseCaseInput input)
+        public async Task<IActionResult> Register([FromForm] RegisterUserUseCaseInput input)
         {
             var useCase = _serviceProvider.GetService<IUseCase<RegisterUserUseCaseInput, RegisterUserUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(input);
