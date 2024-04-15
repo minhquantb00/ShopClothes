@@ -12,8 +12,8 @@ using ShopClothes.Infrastructure.DataContexts;
 namespace ShopClothes.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240325103657_updb")]
-    partial class updb
+    [Migration("20240415062959_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1145,13 +1145,15 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.UserRole", b =>
                 {
-                    b.HasOne("ShopClothes.Domain.Entities.Role", null)
+                    b.HasOne("ShopClothes.Domain.Entities.Role", "Role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId1");
 
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId1");
+
+                    b.Navigation("Role");
 
                     b.Navigation("User");
                 });

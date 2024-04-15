@@ -1143,13 +1143,15 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.UserRole", b =>
                 {
-                    b.HasOne("ShopClothes.Domain.Entities.Role", null)
+                    b.HasOne("ShopClothes.Domain.Entities.Role", "Role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId1");
 
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId1");
+
+                    b.Navigation("Role");
 
                     b.Navigation("User");
                 });
