@@ -29,6 +29,5 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
         [Required(ErrorMessage = "Gender is required")]
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public GenderEnum Gender { get; set; } = GenderEnum.Unknown;
-        [Required(ErrorMessage = "Roles is required")]
     }
 }

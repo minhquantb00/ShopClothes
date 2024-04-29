@@ -44,5 +44,6 @@ namespace ShopClothes.Infrastructure.DataContexts
         {
             return base.Set<TEntity>();
         }
+
     }
 }

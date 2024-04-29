@@ -24,11 +24,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Address", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("AddressDetail")
                         .IsRequired()
@@ -70,9 +70,6 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("Ward")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -83,24 +80,21 @@ namespace ShopClothes.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Address");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Bill", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("AddressId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("AddressId1")
-                        .HasColumnType("bigint");
 
                     b.Property<int?>("BillStatus")
                         .HasColumnType("int");
@@ -118,9 +112,6 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("PaymentMethodId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("PaymentMethodId1")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime?>("PaymentTime")
                         .HasColumnType("datetime2");
 
@@ -132,9 +123,6 @@ namespace ShopClothes.Infrastructure.Migrations
 
                     b.Property<int>("ShippingMethodId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("ShippingMethodId1")
-                        .HasColumnType("bigint");
 
                     b.Property<double>("TotalPriceAfterDiscount")
                         .HasColumnType("float");
@@ -152,46 +140,37 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.Property<int?>("UserVoucherId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserVoucherId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId1");
+                    b.HasIndex("AddressId");
 
-                    b.HasIndex("PaymentMethodId1");
+                    b.HasIndex("PaymentMethodId");
 
-                    b.HasIndex("ShippingMethodId1");
+                    b.HasIndex("ShippingMethodId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
-                    b.HasIndex("UserVoucherId1");
+                    b.HasIndex("UserVoucherId");
 
                     b.ToTable("Bill");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.BillDetail", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int?>("BillDetailStatus")
                         .HasColumnType("int");
 
                     b.Property<int>("BillId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("BillId1")
-                        .HasColumnType("bigint");
 
                     b.Property<int?>("ErrorQuantity")
                         .HasColumnType("int");
@@ -202,9 +181,6 @@ namespace ShopClothes.Infrastructure.Migrations
 
                     b.Property<int>("ProductDetailId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("ProductDetailId1")
-                        .HasColumnType("bigint");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -220,29 +196,26 @@ namespace ShopClothes.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BillId1");
+                    b.HasIndex("BillId");
 
-                    b.HasIndex("ProductDetailId1");
+                    b.HasIndex("ProductDetailId");
 
                     b.ToTable("BillDetail");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Cart", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ProductDetailId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("ProductDetailId1")
-                        .HasColumnType("bigint");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -253,25 +226,22 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductDetailId1");
+                    b.HasIndex("ProductDetailId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Cart");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Color", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ColorCode")
                         .IsRequired()
@@ -294,11 +264,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.ConfirmEmail", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ConfirmCode")
                         .IsRequired()
@@ -313,23 +283,20 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("ConfirmEmail");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.DiscountEvent", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -362,40 +329,34 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.EventProduct", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("DiscountEventId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("DiscountEventId1")
-                        .HasColumnType("bigint");
-
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("ProductId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("DiscountEventId1");
+                    b.HasIndex("DiscountEventId");
 
-                    b.HasIndex("ProductId1");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("EventProduct");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.FavoriteProduct", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -403,34 +364,28 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("ProductDetailId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("ProductDetailId1")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductDetailId1");
+                    b.HasIndex("ProductDetailId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("FavoriteProduct");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.PaymentMethod", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -452,11 +407,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Product", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<double?>("AverageRating")
                         .HasColumnType("float");
@@ -498,9 +453,6 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("ProductTypeId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("ProductTypeId1")
-                        .HasColumnType("bigint");
-
                     b.Property<int>("ReturnQuantity")
                         .HasColumnType("int");
 
@@ -512,24 +464,21 @@ namespace ShopClothes.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductTypeId1");
+                    b.HasIndex("ProductTypeId");
 
                     b.ToTable("Product");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.ProductDetail", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("ColorId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("ColorId1")
-                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -547,17 +496,11 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("ProductId1")
-                        .HasColumnType("bigint");
-
                     b.Property<int>("ReturnQuantity")
                         .HasColumnType("int");
 
                     b.Property<int>("SizeId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("SizeId1")
-                        .HasColumnType("bigint");
 
                     b.Property<int>("SoldQuantity")
                         .HasColumnType("int");
@@ -567,22 +510,22 @@ namespace ShopClothes.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ColorId1");
+                    b.HasIndex("ColorId");
 
-                    b.HasIndex("ProductId1");
+                    b.HasIndex("ProductId");
 
-                    b.HasIndex("SizeId1");
+                    b.HasIndex("SizeId");
 
                     b.ToTable("ProductDetail");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.ProductImage", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -591,29 +534,23 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("ProductId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId1");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("ProductImage");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.ProductReview", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("BillId")
                         .HasColumnType("int");
-
-                    b.Property<long?>("BillId1")
-                        .HasColumnType("bigint");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -625,36 +562,30 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("ProductDetailId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("ProductDetailId1")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime>("ReviewTime")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("BillId1");
+                    b.HasIndex("BillId");
 
-                    b.HasIndex("ProductDetailId1");
+                    b.HasIndex("ProductDetailId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("ProductReview");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.ProductType", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -673,11 +604,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.RankCustomer", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<double>("DiscountPercent")
                         .HasColumnType("float");
@@ -697,11 +628,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.RefreshToken", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("ExpiryTime")
                         .HasColumnType("datetime2");
@@ -713,23 +644,20 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("RefreshToken");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Role", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("RoleCode")
                         .IsRequired()
@@ -746,11 +674,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.ShippingMethod", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -772,11 +700,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Size", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -799,11 +727,11 @@ namespace ShopClothes.Infrastructure.Migrations
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.User", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("AvatarUrl")
                         .HasColumnType("nvarchar(max)");
@@ -836,9 +764,6 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int?>("RankCustomerId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("RankCustomerId1")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("datetime2");
 
@@ -851,47 +776,41 @@ namespace ShopClothes.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RankCustomerId1");
+                    b.HasIndex("RankCustomerId");
 
                     b.ToTable("User");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.UserRole", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("RoleId1")
-                        .HasColumnType("bigint");
-
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("RoleId1");
+                    b.HasIndex("RoleId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserRole");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.UserVoucher", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<double>("DiscountPercent")
                         .HasColumnType("float");
@@ -902,34 +821,28 @@ namespace ShopClothes.Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("UserId1")
-                        .HasColumnType("bigint");
-
                     b.Property<int?>("UserVoucherStatus")
                         .HasColumnType("int");
 
                     b.Property<int>("VoucherId")
                         .HasColumnType("int");
 
-                    b.Property<long?>("VoucherId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
-                    b.HasIndex("VoucherId1");
+                    b.HasIndex("VoucherId");
 
                     b.ToTable("UserVoucher");
                 });
 
             modelBuilder.Entity("ShopClothes.Domain.Entities.Voucher", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -960,7 +873,9 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("Address")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -969,23 +884,31 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.Address", null)
                         .WithMany("Bills")
-                        .HasForeignKey("AddressId1");
+                        .HasForeignKey("AddressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.PaymentMethod", "PaymentMethod")
                         .WithMany("Bills")
-                        .HasForeignKey("PaymentMethodId1");
+                        .HasForeignKey("PaymentMethodId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.ShippingMethod", "ShippingMethod")
                         .WithMany("Bills")
-                        .HasForeignKey("ShippingMethodId1");
+                        .HasForeignKey("ShippingMethodId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("Bills")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.UserVoucher", "UserVoucher")
                         .WithMany("Bills")
-                        .HasForeignKey("UserVoucherId1");
+                        .HasForeignKey("UserVoucherId");
 
                     b.Navigation("PaymentMethod");
 
@@ -1000,11 +923,15 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.Bill", "Bill")
                         .WithMany("BillDetails")
-                        .HasForeignKey("BillId1");
+                        .HasForeignKey("BillId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.ProductDetail", "ProductDetail")
                         .WithMany("BillDetails")
-                        .HasForeignKey("ProductDetailId1");
+                        .HasForeignKey("ProductDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Bill");
 
@@ -1015,11 +942,15 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.ProductDetail", "ProductDetail")
                         .WithMany("Carts")
-                        .HasForeignKey("ProductDetailId1");
+                        .HasForeignKey("ProductDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ProductDetail");
 
@@ -1030,7 +961,9 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -1039,11 +972,15 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.DiscountEvent", "DiscountEvent")
                         .WithMany("EventProducts")
-                        .HasForeignKey("DiscountEventId1");
+                        .HasForeignKey("DiscountEventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.Product", "Product")
                         .WithMany("EventProducts")
-                        .HasForeignKey("ProductId1");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("DiscountEvent");
 
@@ -1054,11 +991,15 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.ProductDetail", "ProductDetail")
                         .WithMany("FavoriteProducts")
-                        .HasForeignKey("ProductDetailId1");
+                        .HasForeignKey("ProductDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("FavoriteProducts")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ProductDetail");
 
@@ -1069,7 +1010,9 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.ProductType", "ProductType")
                         .WithMany("Products")
-                        .HasForeignKey("ProductTypeId1");
+                        .HasForeignKey("ProductTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ProductType");
                 });
@@ -1078,15 +1021,21 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.Color", "Color")
                         .WithMany("ProductDetails")
-                        .HasForeignKey("ColorId1");
+                        .HasForeignKey("ColorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.Product", "Product")
                         .WithMany("ProductDetails")
-                        .HasForeignKey("ProductId1");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.Size", "Size")
                         .WithMany("ProductDetails")
-                        .HasForeignKey("SizeId1");
+                        .HasForeignKey("SizeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Color");
 
@@ -1099,7 +1048,9 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.Product", "Product")
                         .WithMany("ProductImages")
-                        .HasForeignKey("ProductId1");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Product");
                 });
@@ -1108,15 +1059,21 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.Bill", null)
                         .WithMany("ProductReviews")
-                        .HasForeignKey("BillId1");
+                        .HasForeignKey("BillId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.ProductDetail", "ProductDetail")
                         .WithMany("ProductReviews")
-                        .HasForeignKey("ProductDetailId1");
+                        .HasForeignKey("ProductDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("ProductReviews")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ProductDetail");
 
@@ -1127,7 +1084,9 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -1136,7 +1095,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.RankCustomer", "RankCustomer")
                         .WithMany("Users")
-                        .HasForeignKey("RankCustomerId1");
+                        .HasForeignKey("RankCustomerId");
 
                     b.Navigation("RankCustomer");
                 });
@@ -1145,11 +1104,15 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.Role", "Role")
                         .WithMany("UserRoles")
-                        .HasForeignKey("RoleId1");
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("UserRoles")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Role");
 
@@ -1160,11 +1123,15 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     b.HasOne("ShopClothes.Domain.Entities.User", "User")
                         .WithMany("UserVouchers")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ShopClothes.Domain.Entities.Voucher", "Voucher")
                         .WithMany("UserVouchers")
-                        .HasForeignKey("VoucherId1");
+                        .HasForeignKey("VoucherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
 

@@ -35,6 +35,25 @@ namespace ShopClothes.Infrastructure.ImplementRepositories
             _IDbContext = idbContext;
             _dbContext = (DbContext) idbContext;
         }
+        #region Get User InformaTion by keyword
+        public async Task<User> GetUserByEmail(string email)
+        {
+            var user = await _context.User.SingleOrDefaultAsync(x => x.Email.ToLower().Equals(email.ToLower()));
+            return user;
+        }
+
+        public async Task<User> GetUserByUsername(string username)
+        {
+            var user = await _context.User.SingleOrDefaultAsync(x => x.UserName.ToLower().Equals(username.ToLower()));
+            return user;
+        }
+
+        public async Task<User> GetUserByPhoneNumber(string phoneNumber)
+        {
+            var user = await _context.User.SingleOrDefaultAsync(x => x.PhoneNumber.ToLower().Equals(phoneNumber.ToLower()));
+            return user;
+        }
+        #endregion
         #region Thêm danh sách quyền cho một người dùng
         public virtual async Task AddUserToRoleAsync(User user, IEnumerable<string> listRoles)
         {
@@ -76,8 +95,40 @@ namespace ShopClothes.Infrastructure.ImplementRepositories
             }
             return roles.AsEnumerable();
         }
+        public async Task DeleteRolesOfUserAsync(User user, List<string> listRoles)
+        {
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
+            if (listRoles == null)
+            {
+                throw new ArgumentNullException(nameof(listRoles));
+            }
+            foreach (var role in listRoles.Distinct())
+            {
+                var rolesOfUser = await GetRolesOfUserAsync(user);
+                var listPermission = new List<UserRole>();
+                if (await IsStringInListAsync(role, rolesOfUser.ToList()))
+                {
+                    var roleItem = await _context.Role.SingleOrDefaultAsync(x => x.RoleCode.Equals(role));
+                    var permission = await _context.UserRole.SingleOrDefaultAsync(x => x.UserId == user.Id && x.RoleId == roleItem.Id);
+                    if (permission != null)
+                    {
+                        listPermission.Add(permission);
+                    }
+                }
+                else
+                {
 
-        
+                    throw new ArgumentNullException("Không có quyền này");
+
+                }
+                _context.UserRole.RemoveRange(listPermission);
+            }
+            _context.SaveChanges();
+        }
+
         #endregion
         #region Xử lí chuỗi
         private Task<bool> CompareStringAsync(string str1, string str2)

@@ -23,37 +23,44 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
             {
                 Succeeded = false,
             };
-            if(!ValidateValue.IsValidEmail(input.Email))
+            try
             {
-                resultOutput.Errors = new string[] { $"Invalid email format" };
+                if (!ValidateValue.IsValidEmail(input.Email))
+                {
+                    resultOutput.Errors = new string[] { $"Định dạng email không hợp lệ" };
+                    return resultOutput;
+                }
+                if (!ValidateValue.IsValidPhoneNumber(input.PhoneNumber))
+                {
+                    resultOutput.Errors = new string[] { $"Định dạng số điện thoại không hợp lệ" };
+                    return resultOutput;
+                }
+                var user = new User
+                {
+                    UserName = input.UserName,
+                    Password = BcryptNet.HashPassword(input.Password),
+                    AvatarUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zThKtjx7rImritWaiC62PPk65OYt70P7qA&usqp=CAU",
+                    CreateTime = DateTime.Now,
+                    Email = input.Email,
+                    FullName = input.FullName,
+                    Gender = input.Gender,
+                    PhoneNumber = input.PhoneNumber,
+                    UserStatus = Domain.Enumerates.UserStatusEnum.UnActivated
+                };
+                user = await _userRepository.CreateAsync(user);
+                if (user.Id != null && user.Id != 0)
+                {
+                    await _userRepository.AddUserToRoleAsync(user, new string[] { "User" });
+                    resultOutput.Succeeded = true;
+                    return resultOutput;
+                }
+                resultOutput.Errors = new string[] { "User registration failed" };
                 return resultOutput;
             }
-            if(!ValidateValue.IsValidPhoneNumber(input.PhoneNumber))
+            catch
             {
-                resultOutput.Errors = new string[] { $"Invalid phone number format" };
-                return resultOutput;
+                throw;
             }
-            var user = new User
-            {
-                UserName = input.UserName,
-                Password = BcryptNet.HashPassword(input.Password),
-                AvatarUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zThKtjx7rImritWaiC62PPk65OYt70P7qA&usqp=CAU",
-                CreateTime = DateTime.Now,
-                Email = input.Email,
-                FullName = input.FullName,
-                Gender = input.Gender,
-                PhoneNumber = input.PhoneNumber,
-                UserStatus = Domain.Enumerates.UserStatusEnum.UnActivated
-            };
-            user =  await _userRepository.CreateAsync(user);
-            if(user.Id != null && user.Id != 0)
-            {
-                await _userRepository.AddUserToRoleAsync(user, new string[] {"User"});
-                resultOutput.Succeeded = true;
-                return resultOutput;
-            }
-            resultOutput.Errors = new string[] { "User registration failed" };
-            return resultOutput;
         }
     }
 }

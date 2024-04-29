@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ShopClothes.Application.UseCases;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser;
 using ShopClothes.Domain.Entities;
 using ShopClothes.Domain.InterfaceRepositories;
@@ -20,9 +21,23 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 
+#region Register IUseCase
 builder.Services.AddScoped<IUseCase<RegisterUserUseCaseInput, RegisterUserUseCaseOutput>, RegisterUserUseCase>();
-builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+builder.Services.AddScoped<IUseCase<LoginUserUseCaseInput, LoginUserUseCaseOutput>, LoginUserUseCase>();
+#endregion
+
+#region Register Repository
 builder.Services.AddScoped<IDbContext, AppDbContext>();
+builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+builder.Services.AddScoped<IRepository<UserRole>, Repository<UserRole>>();
+builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
+builder.Services.AddScoped<IRepository<RefreshToken>, Repository<RefreshToken>>();
+#endregion
+
+
+#region Register Mapper
+
+#endregion
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigin", builder =>

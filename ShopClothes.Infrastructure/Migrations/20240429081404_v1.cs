@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ShopClothes.Infrastructure.Migrations
 {
-    public partial class initial : Migration
+    public partial class v1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "Color",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ColorCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ColorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -29,7 +29,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "DiscountEvent",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     EventName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -48,7 +48,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "PaymentMethod",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PaymentMethodName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PaymentMethodStatus = table.Column<int>(type: "int", nullable: false),
@@ -64,7 +64,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "ProductType",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductTypeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -79,7 +79,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "RankCustomer",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RankCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RankName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -94,7 +94,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "Role",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RoleName = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -108,7 +108,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "ShippingMethod",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ShippingMethodName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ShippingMethodStatus = table.Column<int>(type: "int", nullable: true),
@@ -124,7 +124,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "Size",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SizeCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SizeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -140,7 +140,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "Voucher",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     VoucherCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     VoucherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -158,7 +158,7 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "Product",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -174,24 +174,24 @@ namespace ShopClothes.Infrastructure.Migrations
                     UpdateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ProductStatus = table.Column<int>(type: "int", nullable: true),
                     InventoryNumber = table.Column<int>(type: "int", nullable: false),
-                    ProductTypeId = table.Column<int>(type: "int", nullable: false),
-                    ProductTypeId1 = table.Column<long>(type: "bigint", nullable: true)
+                    ProductTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Product", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Product_ProductType_ProductTypeId1",
-                        column: x => x.ProductTypeId1,
+                        name: "FK_Product_ProductType_ProductTypeId",
+                        column: x => x.ProductTypeId,
                         principalTable: "ProductType",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "User",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -204,15 +204,14 @@ namespace ShopClothes.Infrastructure.Migrations
                     UserStatus = table.Column<int>(type: "int", nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    RankCustomerId = table.Column<int>(type: "int", nullable: true),
-                    RankCustomerId1 = table.Column<long>(type: "bigint", nullable: true)
+                    RankCustomerId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_User_RankCustomer_RankCustomerId1",
-                        column: x => x.RankCustomerId1,
+                        name: "FK_User_RankCustomer_RankCustomerId",
+                        column: x => x.RankCustomerId,
                         principalTable: "RankCustomer",
                         principalColumn: "Id");
                 });
@@ -221,33 +220,33 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "EventProduct",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductId = table.Column<int>(type: "int", nullable: false),
-                    ProductId1 = table.Column<long>(type: "bigint", nullable: true),
-                    DiscountEventId = table.Column<int>(type: "int", nullable: false),
-                    DiscountEventId1 = table.Column<long>(type: "bigint", nullable: true)
+                    DiscountEventId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_EventProduct", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_EventProduct_DiscountEvent_DiscountEventId1",
-                        column: x => x.DiscountEventId1,
+                        name: "FK_EventProduct_DiscountEvent_DiscountEventId",
+                        column: x => x.DiscountEventId,
                         principalTable: "DiscountEvent",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_EventProduct_Product_ProductId1",
-                        column: x => x.ProductId1,
+                        name: "FK_EventProduct_Product_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Product",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ProductDetail",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     InventoryNumber = table.Column<int>(type: "int", nullable: false),
                     SoldQuantity = table.Column<int>(type: "int", nullable: false),
@@ -257,60 +256,59 @@ namespace ShopClothes.Infrastructure.Migrations
                     CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ColorId = table.Column<int>(type: "int", nullable: false),
-                    ColorId1 = table.Column<long>(type: "bigint", nullable: true),
                     SizeId = table.Column<int>(type: "int", nullable: false),
-                    SizeId1 = table.Column<long>(type: "bigint", nullable: true),
-                    ProductId = table.Column<int>(type: "int", nullable: false),
-                    ProductId1 = table.Column<long>(type: "bigint", nullable: true)
+                    ProductId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ProductDetail", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProductDetail_Color_ColorId1",
-                        column: x => x.ColorId1,
+                        name: "FK_ProductDetail_Color_ColorId",
+                        column: x => x.ColorId,
                         principalTable: "Color",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ProductDetail_Product_ProductId1",
-                        column: x => x.ProductId1,
+                        name: "FK_ProductDetail_Product_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Product",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ProductDetail_Size_SizeId1",
-                        column: x => x.SizeId1,
+                        name: "FK_ProductDetail_Size_SizeId",
+                        column: x => x.SizeId,
                         principalTable: "Size",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ProductImage",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductId = table.Column<int>(type: "int", nullable: false),
-                    ProductId1 = table.Column<long>(type: "bigint", nullable: true),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ProductImage", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProductImage_Product_ProductId1",
-                        column: x => x.ProductId1,
+                        name: "FK_ProductImage_Product_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Product",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Address",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     ConsigneeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     WardId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DistrictId = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -328,21 +326,21 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Address", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Address_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Address_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ConfirmEmail",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ConfirmCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     ExpiryTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsConfirmed = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -350,69 +348,68 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_ConfirmEmail", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ConfirmEmail_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_ConfirmEmail_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "RefreshToken",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Token = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     ExpiryTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_RefreshToken", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_RefreshToken_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_RefreshToken_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "UserRole",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
-                    RoleId1 = table.Column<long>(type: "bigint", nullable: true)
+                    UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_UserRole", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserRole_Role_RoleId1",
-                        column: x => x.RoleId1,
+                        name: "FK_UserRole_Role_RoleId",
+                        column: x => x.RoleId,
                         principalTable: "Role",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_UserRole_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_UserRole_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "UserVoucher",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     VoucherId = table.Column<int>(type: "int", nullable: false),
-                    VoucherId1 = table.Column<long>(type: "bigint", nullable: true),
                     ExpiryTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DiscountPercent = table.Column<double>(type: "float", nullable: false),
                     UserVoucherStatus = table.Column<int>(type: "int", nullable: true)
@@ -421,27 +418,27 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_UserVoucher", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserVoucher_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_UserVoucher_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_UserVoucher_Voucher_VoucherId1",
-                        column: x => x.VoucherId1,
+                        name: "FK_UserVoucher_Voucher_VoucherId",
+                        column: x => x.VoucherId,
                         principalTable: "Voucher",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Cart",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     ProductDetailId = table.Column<int>(type: "int", nullable: false),
-                    ProductDetailId1 = table.Column<long>(type: "bigint", nullable: true),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateTime = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -450,27 +447,27 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Cart", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Cart_ProductDetail_ProductDetailId1",
-                        column: x => x.ProductDetailId1,
+                        name: "FK_Cart_ProductDetail_ProductDetailId",
+                        column: x => x.ProductDetailId,
                         principalTable: "ProductDetail",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Cart_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Cart_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "FavoriteProduct",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     ProductDetailId = table.Column<int>(type: "int", nullable: false),
-                    ProductDetailId1 = table.Column<long>(type: "bigint", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateTime = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -478,31 +475,30 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_FavoriteProduct", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_FavoriteProduct_ProductDetail_ProductDetailId1",
-                        column: x => x.ProductDetailId1,
+                        name: "FK_FavoriteProduct_ProductDetail_ProductDetailId",
+                        column: x => x.ProductDetailId,
                         principalTable: "ProductDetail",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_FavoriteProduct_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_FavoriteProduct_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Bill",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     AddressId = table.Column<int>(type: "int", nullable: false),
                     TradingCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ShippingMethodId = table.Column<int>(type: "int", nullable: false),
-                    ShippingMethodId1 = table.Column<long>(type: "bigint", nullable: true),
                     PaymentMethodId = table.Column<int>(type: "int", nullable: false),
-                    PaymentMethodId1 = table.Column<long>(type: "bigint", nullable: true),
                     CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     PaymentTime = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -512,37 +508,39 @@ namespace ShopClothes.Infrastructure.Migrations
                     ReasonForRefusal = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TotalPriceAfterDiscount = table.Column<double>(type: "float", nullable: false),
                     UserVoucherId = table.Column<int>(type: "int", nullable: true),
-                    UserVoucherId1 = table.Column<long>(type: "bigint", nullable: true),
                     EmployeeCreateBillId = table.Column<int>(type: "int", nullable: false),
-                    ShippingFee = table.Column<double>(type: "float", nullable: false),
-                    AddressId1 = table.Column<long>(type: "bigint", nullable: true)
+                    ShippingFee = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Bill", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Bill_Address_AddressId1",
-                        column: x => x.AddressId1,
+                        name: "FK_Bill_Address_AddressId",
+                        column: x => x.AddressId,
                         principalTable: "Address",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Bill_PaymentMethod_PaymentMethodId1",
-                        column: x => x.PaymentMethodId1,
+                        name: "FK_Bill_PaymentMethod_PaymentMethodId",
+                        column: x => x.PaymentMethodId,
                         principalTable: "PaymentMethod",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Bill_ShippingMethod_ShippingMethodId1",
-                        column: x => x.ShippingMethodId1,
+                        name: "FK_Bill_ShippingMethod_ShippingMethodId",
+                        column: x => x.ShippingMethodId,
                         principalTable: "ShippingMethod",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Bill_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Bill_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Bill_UserVoucher_UserVoucherId1",
-                        column: x => x.UserVoucherId1,
+                        name: "FK_Bill_UserVoucher_UserVoucherId",
+                        column: x => x.UserVoucherId,
                         principalTable: "UserVoucher",
                         principalColumn: "Id");
                 });
@@ -551,12 +549,10 @@ namespace ShopClothes.Infrastructure.Migrations
                 name: "BillDetail",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BillId = table.Column<int>(type: "int", nullable: false),
-                    BillId1 = table.Column<long>(type: "bigint", nullable: true),
                     ProductDetailId = table.Column<int>(type: "int", nullable: false),
-                    ProductDetailId1 = table.Column<long>(type: "bigint", nullable: true),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     UnitPrice = table.Column<double>(type: "float", nullable: false),
                     Note = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -569,197 +565,199 @@ namespace ShopClothes.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_BillDetail", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BillDetail_Bill_BillId1",
-                        column: x => x.BillId1,
+                        name: "FK_BillDetail_Bill_BillId",
+                        column: x => x.BillId,
                         principalTable: "Bill",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BillDetail_ProductDetail_ProductDetailId1",
-                        column: x => x.ProductDetailId1,
+                        name: "FK_BillDetail_ProductDetail_ProductDetailId",
+                        column: x => x.ProductDetailId,
                         principalTable: "ProductDetail",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ProductReview",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<long>(type: "bigint", nullable: true),
                     ProductDetailId = table.Column<int>(type: "int", nullable: false),
-                    ProductDetailId1 = table.Column<long>(type: "bigint", nullable: true),
                     BillId = table.Column<int>(type: "int", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NumberOfStars = table.Column<int>(type: "int", nullable: false),
-                    ReviewTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BillId1 = table.Column<long>(type: "bigint", nullable: true)
+                    ReviewTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ProductReview", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProductReview_Bill_BillId1",
-                        column: x => x.BillId1,
+                        name: "FK_ProductReview_Bill_BillId",
+                        column: x => x.BillId,
                         principalTable: "Bill",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ProductReview_ProductDetail_ProductDetailId1",
-                        column: x => x.ProductDetailId1,
+                        name: "FK_ProductReview_ProductDetail_ProductDetailId",
+                        column: x => x.ProductDetailId,
                         principalTable: "ProductDetail",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ProductReview_User_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_ProductReview_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Address_UserId1",
+                name: "IX_Address_UserId",
                 table: "Address",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bill_AddressId1",
+                name: "IX_Bill_AddressId",
                 table: "Bill",
-                column: "AddressId1");
+                column: "AddressId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bill_PaymentMethodId1",
+                name: "IX_Bill_PaymentMethodId",
                 table: "Bill",
-                column: "PaymentMethodId1");
+                column: "PaymentMethodId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bill_ShippingMethodId1",
+                name: "IX_Bill_ShippingMethodId",
                 table: "Bill",
-                column: "ShippingMethodId1");
+                column: "ShippingMethodId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bill_UserId1",
+                name: "IX_Bill_UserId",
                 table: "Bill",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bill_UserVoucherId1",
+                name: "IX_Bill_UserVoucherId",
                 table: "Bill",
-                column: "UserVoucherId1");
+                column: "UserVoucherId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BillDetail_BillId1",
+                name: "IX_BillDetail_BillId",
                 table: "BillDetail",
-                column: "BillId1");
+                column: "BillId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BillDetail_ProductDetailId1",
+                name: "IX_BillDetail_ProductDetailId",
                 table: "BillDetail",
-                column: "ProductDetailId1");
+                column: "ProductDetailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cart_ProductDetailId1",
+                name: "IX_Cart_ProductDetailId",
                 table: "Cart",
-                column: "ProductDetailId1");
+                column: "ProductDetailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cart_UserId1",
+                name: "IX_Cart_UserId",
                 table: "Cart",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ConfirmEmail_UserId1",
+                name: "IX_ConfirmEmail_UserId",
                 table: "ConfirmEmail",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EventProduct_DiscountEventId1",
+                name: "IX_EventProduct_DiscountEventId",
                 table: "EventProduct",
-                column: "DiscountEventId1");
+                column: "DiscountEventId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EventProduct_ProductId1",
+                name: "IX_EventProduct_ProductId",
                 table: "EventProduct",
-                column: "ProductId1");
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FavoriteProduct_ProductDetailId1",
+                name: "IX_FavoriteProduct_ProductDetailId",
                 table: "FavoriteProduct",
-                column: "ProductDetailId1");
+                column: "ProductDetailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FavoriteProduct_UserId1",
+                name: "IX_FavoriteProduct_UserId",
                 table: "FavoriteProduct",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Product_ProductTypeId1",
+                name: "IX_Product_ProductTypeId",
                 table: "Product",
-                column: "ProductTypeId1");
+                column: "ProductTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductDetail_ColorId1",
+                name: "IX_ProductDetail_ColorId",
                 table: "ProductDetail",
-                column: "ColorId1");
+                column: "ColorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductDetail_ProductId1",
+                name: "IX_ProductDetail_ProductId",
                 table: "ProductDetail",
-                column: "ProductId1");
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductDetail_SizeId1",
+                name: "IX_ProductDetail_SizeId",
                 table: "ProductDetail",
-                column: "SizeId1");
+                column: "SizeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductImage_ProductId1",
+                name: "IX_ProductImage_ProductId",
                 table: "ProductImage",
-                column: "ProductId1");
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductReview_BillId1",
+                name: "IX_ProductReview_BillId",
                 table: "ProductReview",
-                column: "BillId1");
+                column: "BillId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductReview_ProductDetailId1",
+                name: "IX_ProductReview_ProductDetailId",
                 table: "ProductReview",
-                column: "ProductDetailId1");
+                column: "ProductDetailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductReview_UserId1",
+                name: "IX_ProductReview_UserId",
                 table: "ProductReview",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RefreshToken_UserId1",
+                name: "IX_RefreshToken_UserId",
                 table: "RefreshToken",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_User_RankCustomerId1",
+                name: "IX_User_RankCustomerId",
                 table: "User",
-                column: "RankCustomerId1");
+                column: "RankCustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserRole_RoleId1",
+                name: "IX_UserRole_RoleId",
                 table: "UserRole",
-                column: "RoleId1");
+                column: "RoleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserRole_UserId1",
+                name: "IX_UserRole_UserId",
                 table: "UserRole",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserVoucher_UserId1",
+                name: "IX_UserVoucher_UserId",
                 table: "UserVoucher",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserVoucher_VoucherId1",
+                name: "IX_UserVoucher_VoucherId",
                 table: "UserVoucher",
-                column: "VoucherId1");
+                column: "VoucherId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
