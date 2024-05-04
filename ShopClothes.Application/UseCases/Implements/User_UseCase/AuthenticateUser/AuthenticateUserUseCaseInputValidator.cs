@@ -10,5 +10,11 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateU
 {
     public class AuthenticateUserUseCaseInputValidator : AbstractValidator<AuthenticateUserUseCaseInput>
     {
+        public AuthenticateUserUseCaseInputValidator()
+        {
+            RuleFor(x => x.ConfirmCode)
+                .Must(x => !string.IsNullOrEmpty(x))
+                .WithMessage("ConfirmCode should be has value");
+        }
     }
 }

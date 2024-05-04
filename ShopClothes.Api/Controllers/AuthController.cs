@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ShopClothes.Application.ApplicationConstant;
 using ShopClothes.Application.UseCases;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser;
 using System.Reflection.Metadata;
@@ -33,6 +34,17 @@ namespace ShopClothes.Api.Controllers
         public async Task<IActionResult> Login([FromBody] LoginUserUseCaseInput input)
         {
             var useCase = _serviceProvider.GetService<IUseCase<LoginUserUseCaseInput, LoginUserUseCaseOutput>>();
+            var result = await useCase.ExcuteAsync(input);
+            if (!result.Succeeded)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [HttpPut]
+        public async Task<IActionResult> AuthenticateUser([FromBody] AuthenticateUserUseCaseInput input)
+        {
+            var useCase = _serviceProvider.GetService<IUseCase<AuthenticateUserUseCaseInput, AuthenticateUserUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(input);
             if (!result.Succeeded)
             {

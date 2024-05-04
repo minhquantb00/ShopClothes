@@ -1,0 +1,4 @@
+const tableHeader = {
+  title: "",
+  key: ""
+};

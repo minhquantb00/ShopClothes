@@ -12,6 +12,13 @@ namespace ShopClothes.Domain.InterfaceRepositories
 {
     public interface IRepository<TEntity>
     {
+        #region Get User InformaTion by keyword
+        Task<User> GetUserByEmail(string email);
+
+        Task<User> GetUserByUsername(string username);
+
+        Task<User> GetUserByPhoneNumber(string phoneNumber);
+        #endregion
         #region Get Role, Add Roles
         Task AddUserToRoleAsync(User user, IEnumerable<string> listRoles);
         Task<IEnumerable<string>> GetRolesOfUserAsync(User user);

@@ -1,10 +1,14 @@
-
+﻿
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ShopClothes.Application.Handle.HandleEmail;
+using ShopClothes.Application.ImplementService;
+using ShopClothes.Application.InterfaceService;
 using ShopClothes.Application.UseCases;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser;
 using ShopClothes.Domain.Entities;
@@ -24,6 +28,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conf
 #region Register IUseCase
 builder.Services.AddScoped<IUseCase<RegisterUserUseCaseInput, RegisterUserUseCaseOutput>, RegisterUserUseCase>();
 builder.Services.AddScoped<IUseCase<LoginUserUseCaseInput, LoginUserUseCaseOutput>, LoginUserUseCase>();
+builder.Services.AddScoped<IUseCase<AuthenticateUserUseCaseInput, AuthenticateUserUseCaseOutput>, AuthenticateUserUseCase>();
 #endregion
 
 #region Register Repository
@@ -32,8 +37,12 @@ builder.Services.AddScoped<IRepository<User>, Repository<User>>();
 builder.Services.AddScoped<IRepository<UserRole>, Repository<UserRole>>();
 builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
 builder.Services.AddScoped<IRepository<RefreshToken>, Repository<RefreshToken>>();
+builder.Services.AddScoped<IRepository<ConfirmEmail>, Repository<ConfirmEmail>>();
 #endregion
 
+#region Đăng ký service
+builder.Services.AddScoped<IEmailService, EmailService>();
+#endregion
 
 #region Register Mapper
 
@@ -43,12 +52,31 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowOrigin", builder =>
     {
         builder
-            .WithOrigins("http://localhost:4200") // Update with your Angular app's URL
+            .WithOrigins("http://localhost:8080", "http://localhost:4200", "http://localhost:5173") // Update with your Angular app's URL
             .AllowAnyHeader()
-            .AllowAnyMethod();
+                .AllowAnyMethod()
+                .AllowCredentials();
     });
 });
 
+
+
+
+
+
+
+
+
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
+{
+    // Set the expiration time for the OTP
+    options.TokenLifespan = TimeSpan.FromMinutes(5); // Adjust the time span as needed
+});
+
+builder.Services.Configure<IdentityOptions>(
+    opts => opts.SignIn.RequireConfirmedEmail = true
+    );
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>
@@ -74,7 +102,9 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
+builder.Services.AddMemoryCache();
+var emailConfig = configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+builder.Services.AddSingleton(emailConfig);
 
 //builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddControllers();
