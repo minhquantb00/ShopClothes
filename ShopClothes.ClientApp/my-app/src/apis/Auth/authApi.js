@@ -28,11 +28,11 @@ export const authApi = defineStore("authApi", {
     login(params) {
       return new Promise((resolve, reject) => {
         axiosIns
-          .post(`Auth/Login`, {
+          .post('Auth/Login', {
             ...params,
           })
           .then((res) => {
-            resolve(res.data.data);
+            resolve(res);
           })
           .catch((error) => {
             reject(error);

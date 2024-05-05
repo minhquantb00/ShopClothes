@@ -23,9 +23,9 @@ axiosIns.interceptors.response.use(response => {
   return response
 }, error => {
   if(error.response?.status === 401){
-      localStorage.removeItem('userData')
+      localStorage.removeItem('userInfo')
       localStorage.removeItem('accessToken')
-      localStorage.removeItem('userAbilities')
+      localStorage.removeItem('refreshToken')
 
       router.push('/login')
   }

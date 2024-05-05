@@ -3,4 +3,4 @@ const LocalStorageKey = {
   USER_DATA: 'userData',
   REFRESH_TOKEN: 'refreshToken',
 }
-module.exports = LocalStorageKey;
+export {LocalStorageKey};

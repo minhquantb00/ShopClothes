@@ -17,4 +17,4 @@ const AuthMessage = {
   VerifySuccess: "Kích hoạt thành công",
 };
 
-module.exports = AuthMessage;
+export {AuthMessage};

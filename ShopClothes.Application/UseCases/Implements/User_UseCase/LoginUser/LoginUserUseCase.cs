@@ -83,13 +83,13 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser
             var roles = await _baseRoleRepository.GetAllAsync();
 
             var authClaims = new List<Claim>
-    {
-        new Claim("Id", user.Id.ToString()),
-        new Claim("UserName", user.UserName),
-        new Claim("Email", user.Email),
-        new Claim("FullName", user.FullName),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-    };
+            {
+                new Claim("Id", user.Id.ToString()),
+                new Claim("UserName", user.UserName),
+                new Claim("Email", user.Email),
+                new Claim("FullName", user.FullName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            };
 
             foreach (var permission in permissions)
             {
@@ -129,7 +129,7 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser
         }
         private JwtSecurityToken GetToken(List<Claim> authClaims)
         {
-            var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecretKey"]));
+            var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
             _ = int.TryParse(_configuration["JWT:TokenValidityInMinutes"], out int tokenValidityInMinutes);
             var expirationTimeUtc = DateTime.UtcNow.AddHours(tokenValidityInMinutes);
             var localTimeZone = TimeZoneInfo.Local;

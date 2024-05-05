@@ -166,6 +166,7 @@ export default {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  height: 80%;
 }
 .set-index {
 }

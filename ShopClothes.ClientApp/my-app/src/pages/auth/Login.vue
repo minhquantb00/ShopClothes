@@ -25,6 +25,7 @@
             :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
             :type="visible ? 'text' : 'password'"
             @click:append-inner="visible = !visible"
+            @keydown.enter="login"
             variant="underlined"
           ></v-text-field>
           <v-checkbox v-model="terms" color="primary" label="Nhớ mật khẩu" />
@@ -33,7 +34,6 @@
         <v-card-actions class="card-action-item">
           <v-btn color="success" :loading="loading" @click="login">
             Đăng nhập
-
             <v-icon icon="mdi-chevron-right" end></v-icon>
           </v-btn>
         </v-card-actions>
@@ -44,7 +44,7 @@
             color="success"
             @click="
               () => {
-                router.push({ path: '/' });
+                router.push({ path: '/register' });
               }
             "
             >Đăng ký</v-btn
@@ -57,6 +57,7 @@
 <script>
 import { useRouter } from "vue-router";
 import { authApi } from "../../apis/Auth/authApi";
+import mitt from "mitt";
 export default {
   data() {
     return {
@@ -64,6 +65,11 @@ export default {
       inputLogin: {
         userName: "",
         password: "",
+      },
+      emitter: mitt(),
+      error: {
+        errorCheck: false,
+        errorMessage: "",
       },
       terms: false,
       authenticateApi: authApi(),
@@ -81,23 +87,77 @@ export default {
 
           return "Mật khẩu là bắt buộc!";
         },
-        (value) => {
-          if (
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-              value
-            )
-          )
-            return true;
-
-          return "Mật khẩu phải có ít nhất 8 ký tự, ít nhất 1 ký tự in hoa, ít nhất 1 ký tự in thường, ít nhất 1 số và 1 ký tự đặc biệt!";
-        },
       ],
     };
   },
   methods: {
     async login() {
+      try {
+        console.log('lần 1')
+        this.loading = true;
+        const result = await this.authenticateApi.login(this.inputLogin);
+        if (result.status === 200) {
+          console.log("vào đây chưa")
+          this.emitter.emit("showAlert", {
+            type: "success",
+            content: "Đăng nhập thành công",
+          });
+          if (!localStorage.getItem("accessToken")) {
+            console.log("rồi đây nữa")
+            const resultToken = result.data;
+            const resultEnd = resultToken.data
+            localStorage.setItem("accessToken", resultEnd.accessToken);
+            localStorage.setItem("refreshToken", resultEnd.refreshToken);
+            const accessToken = localStorage.getItem("accessToken");
+            console.log('đây nữa')
+            let decoded = this.parseJwt(accessToken);
+            
+            localStorage.setItem("userInfo", JSON.stringify(decoded));
+            const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+            console.log(userInfo)
+          }
+          this.loading = true
+          this.router.push({ path: "/" });
+          
+        } else {
+          const alert = {
+            type: "error",
+            content: "Đăng nhập thất bại",
+          };
 
+          this.emitter.emit("showAlert", alert);
+          this.loading = false
+        }
+      } catch {
+        this.loading = false;
+        const alert = {
+          type: "error",
+          content: "Lỗi server",
+        };
+
+        this.emitter.emit("showAlert", alert);
+      }
     },
+   parseJwt(token) {
+      console.log(token)
+      var base64Url = token.split(".")[1];
+      var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+      var jsonPayload = decodeURIComponent(
+        window
+          .atob(base64)
+          .split("")
+          .map(function (c) {
+            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join("")
+      );
+      return JSON.parse(jsonPayload);
+    },
+  },
+  mounted() {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    localStorage.removeItem("userInfo");
   },
 };
 </script>
@@ -141,7 +201,7 @@ export default {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   height: 40%;
 }
-.card-action-item{
+.card-action-item {
   justify-content: space-evenly;
 }
 </style>
