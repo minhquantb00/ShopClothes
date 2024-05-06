@@ -44,11 +44,13 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateU
                 if(confirmEmail.ExpiryTime < DateTime.Now)
                 {
                     response.Errors = new string[] { "Mã xác nhận đã hết hạn" };
+                    return response;
                 }
                 var user = await _userRepository.GetAsync(record => record.Id == confirmEmail.UserId);
                 if(user == null)
                 {
                     response.Errors = new string[] { "Người dùng không tồn tại" };
+                    return response;
                 }
                 user.UserStatus = Domain.Enumerates.UserStatusEnum.Activated;
                 await _userRepository.UpdateAsync(user);
