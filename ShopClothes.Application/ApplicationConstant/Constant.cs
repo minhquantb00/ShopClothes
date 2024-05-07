@@ -27,5 +27,10 @@ namespace ShopClothes.Application.ApplicationConstant
             public const string USER = "User";
             public const string PERMISSIONS = "Permissions";
         }
+
+        public static string GenerateCodeActive()
+        {
+            return "MyBugsShop_" + DateTime.Now.Ticks.ToString();
+        }
     }
 }

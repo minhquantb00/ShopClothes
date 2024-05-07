@@ -9,6 +9,9 @@ using ShopClothes.Application.ImplementService;
 using ShopClothes.Application.InterfaceService;
 using ShopClothes.Application.UseCases;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreateNewPasswordUser;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.ForgotPasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser;
 using ShopClothes.Domain.Entities;
@@ -29,6 +32,9 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conf
 builder.Services.AddScoped<IUseCase<RegisterUserUseCaseInput, RegisterUserUseCaseOutput>, RegisterUserUseCase>();
 builder.Services.AddScoped<IUseCase<LoginUserUseCaseInput, LoginUserUseCaseOutput>, LoginUserUseCase>();
 builder.Services.AddScoped<IUseCase<AuthenticateUserUseCaseInput, AuthenticateUserUseCaseOutput>, AuthenticateUserUseCase>();
+builder.Services.AddScoped<IUseCase<ChangePasswordUserUseCaseInput, ChangePasswordUserUseCaseOutput>, ChangePasswordUserUseCase>();
+builder.Services.AddScoped<IUseCase<ForgotPasswordUserUseCaseInput, ForgotPasswordUserUseCaseOuput>, ForgotPasswordUserUseCase>();
+builder.Services.AddScoped<IUseCase<ConfirmCreateNewPasswordUserUseCaseInput, ConfirmCreateNewPasswordUserUseCaseOutput>, ConfirmCreateNewPasswordUserUseCase>();
 #endregion
 
 #region Register Repository
@@ -41,6 +47,7 @@ builder.Services.AddScoped<IRepository<ConfirmEmail>, Repository<ConfirmEmail>>(
 #endregion
 
 #region Đăng ký service
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IEmailService, EmailService>();
 #endregion
 
@@ -52,20 +59,12 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowOrigin", builder =>
     {
         builder
-            .WithOrigins("http://localhost:8080", "http://localhost:4200", "http://localhost:5173") // Update with your Angular app's URL
+            .WithOrigins("http://localhost:8080", "http://localhost:4200", "http://localhost:5174")
             .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials();
     });
 });
-
-
-
-
-
-
-
-
 
 
 builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
@@ -137,8 +136,6 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
-
-
 
 var app = builder.Build();
 
