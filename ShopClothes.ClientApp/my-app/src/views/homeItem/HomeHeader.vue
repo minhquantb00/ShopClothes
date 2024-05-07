@@ -1,16 +1,16 @@
 <template>
-  <v-card style="border-radius: 0" color="grey-lighten-3" max-width="100%">
+  <v-card style="border-radius: 0;" color="grey-lighten-3" max-width="100%">
     <v-layout>
       <v-app-bar class="set-app-bar" color="white">
-        <template v-slot:prepend>
+        <!-- <template v-slot:prepend>
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
-        </template>
+        </template> -->
 
         <div>
           <router-link to="/">
             <img
             src="../../assets/image-removebg-preview (1).png"
-            style="width: 180px"
+            style="width: 200px"
           />
           </router-link>
         </div>
