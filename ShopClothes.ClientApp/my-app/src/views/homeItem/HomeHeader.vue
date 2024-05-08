@@ -71,7 +71,7 @@
                   >
                     <v-avatar
                       size="50"
-                      image="https://miro.medium.com/v2/resize:fit:1400/1*rKl56ixsC55cMAsO2aQhGQ@2x.jpeg"
+                      image="https://res-console.cloudinary.com/dacc055vz/media_explorer_thumbnails/8d1680b8c08e837e20c46e7f9c0f29b8/detailed"
                     ></v-avatar>
                   </v-btn>
                 </template>
@@ -80,7 +80,7 @@
                   <v-list>
                     <v-list-item
                       class="user-list-item"
-                      prepend-avatar="https://miro.medium.com/v2/resize:fit:1400/1*rKl56ixsC55cMAsO2aQhGQ@2x.jpeg"
+                      prepend-avatar="https://res-console.cloudinary.com/dacc055vz/media_explorer_thumbnails/8d1680b8c08e837e20c46e7f9c0f29b8/detailed"
                       :subtitle="userInfo.Email"
                       :title="userInfo.FullName"
                     >
