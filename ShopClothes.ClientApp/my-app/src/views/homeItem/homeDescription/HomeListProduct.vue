@@ -12,7 +12,7 @@
           <VImg :src="product.image" cover height="30em" />
 
           <VCardTitle style="margin: 10px 0; padding: 0">{{ product.productName }}</VCardTitle>
-          <VCardText style="padding: 0"> Giá: {{ product.priceAfterDiscount }} </VCardText>
+          <VCardText style="padding: 0; font-weight:bold; font-size:18px; color: red"> Giá: {{ product.priceAfterDiscount }} </VCardText>
           <VCardText
           style="padding: 10px 0"
             >Giá gốc:
@@ -144,7 +144,7 @@ export default {
           image:
             "https://product.hstatic.net/1000341902/product/2310wa40_15_-_hong__1__42b4ce248c7a4aceb9036f870f04a319_large.jpg",
           productName: "Áo dài ôm voan hoa tay cánh tiên",
-          priceAfterDiscount: 2000,
+          priceAfterDiscount: 2000 + "$",
           price: 3000 + "$",
           createTime: new Date("2024-01-01"),
         },

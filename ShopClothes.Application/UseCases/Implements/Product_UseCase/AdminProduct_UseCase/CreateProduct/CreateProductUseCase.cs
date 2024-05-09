@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
 using ShopClothes.Application.ApplicationConstant;
+using ShopClothes.Application.Handle.HandleImage;
 using ShopClothes.Domain.Entities;
 using ShopClothes.Domain.InterfaceRepositories;
 using ShopClothes.Domain.Validates;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProduct
 {
-    internal class CreateProductUseCase : IUseCase<CreateProductUseCaseInput, CreateProductUseCaseOutput>
+    public class CreateProductUseCase : IUseCase<CreateProductUseCaseInput, CreateProductUseCaseOutput>
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IRepository<Product> _productRepository;
@@ -55,7 +56,7 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
                     CreateTime = DateTime.Now,
                     Description = input.Description,
                     ErrorQuantity = 0,
-                    ImageUrl = "",
+                    ImageUrl = await HandleUploadImage.Upfile(input.ImageUrl),
                     InventoryNumber = 0,
                     Price = input.Price,
                     ProductCode = Constant.GenerateCodeActive(),

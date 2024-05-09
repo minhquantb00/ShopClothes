@@ -8,6 +8,7 @@ using ShopClothes.Application.Handle.HandleEmail;
 using ShopClothes.Application.ImplementService;
 using ShopClothes.Application.InterfaceService;
 using ShopClothes.Application.UseCases;
+using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProduct;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreateNewPasswordUser;
@@ -39,6 +40,7 @@ builder.Services.AddScoped<IUseCase<ForgotPasswordUserUseCaseInput, ForgotPasswo
 builder.Services.AddScoped<IUseCase<ConfirmCreateNewPasswordUserUseCaseInput, ConfirmCreateNewPasswordUserUseCaseOutput>, ConfirmCreateNewPasswordUserUseCase>();
 builder.Services.AddScoped<IUseCase<GetUserUseCaseInput, GetUserUseCaseOutput>, GetUserUseCase>();
 builder.Services.AddScoped<IUseCaseGetById<int, GetUserByIdUseCaseOutput>, GetUserByIdUseCase>();
+builder.Services.AddScoped<IUseCase<CreateProductUseCaseInput, CreateProductUseCaseOutput>, CreateProductUseCase>();
 #endregion
 
 #region Register Repository
@@ -48,6 +50,9 @@ builder.Services.AddScoped<IRepository<UserRole>, Repository<UserRole>>();
 builder.Services.AddScoped<IRepository<Role>, Repository<Role>>();
 builder.Services.AddScoped<IRepository<RefreshToken>, Repository<RefreshToken>>();
 builder.Services.AddScoped<IRepository<ConfirmEmail>, Repository<ConfirmEmail>>();
+builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+builder.Services.AddScoped<IRepository<ProductType>, Repository<ProductType>>();
+
 #endregion
 
 #region Đăng ký service
@@ -57,6 +62,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 
 #region Register Mapper
 builder.Services.AddScoped<GetUserUseCaseMapping>();
+builder.Services.AddScoped<CreateProductUseCaseMappingProduct>();
 #endregion
 builder.Services.AddCors(options =>
 {
