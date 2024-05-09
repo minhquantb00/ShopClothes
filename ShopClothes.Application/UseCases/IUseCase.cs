@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShopClothes.Application.UseCases
 {
-    public interface IUseCase<TUseCaseInput, TUseCaseOutput> where TUseCaseInput : class where TUseCaseOutput : class
+    public interface IUseCase<TUseCaseInput, TUseCaseOutput> where TUseCaseInput : class  where TUseCaseOutput : class
     {
         Task<TUseCaseOutput> ExcuteAsync(TUseCaseInput input);
     }

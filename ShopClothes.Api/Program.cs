@@ -12,6 +12,8 @@ using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreateNewPasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ForgotPasswordUser;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.GetUser;
+using ShopClothes.Application.UseCases.Implements.User_UseCase.GetUserById;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser;
 using ShopClothes.Domain.Entities;
@@ -35,6 +37,8 @@ builder.Services.AddScoped<IUseCase<AuthenticateUserUseCaseInput, AuthenticateUs
 builder.Services.AddScoped<IUseCase<ChangePasswordUserUseCaseInput, ChangePasswordUserUseCaseOutput>, ChangePasswordUserUseCase>();
 builder.Services.AddScoped<IUseCase<ForgotPasswordUserUseCaseInput, ForgotPasswordUserUseCaseOuput>, ForgotPasswordUserUseCase>();
 builder.Services.AddScoped<IUseCase<ConfirmCreateNewPasswordUserUseCaseInput, ConfirmCreateNewPasswordUserUseCaseOutput>, ConfirmCreateNewPasswordUserUseCase>();
+builder.Services.AddScoped<IUseCase<GetUserUseCaseInput, GetUserUseCaseOutput>, GetUserUseCase>();
+builder.Services.AddScoped<IUseCaseGetById<int, GetUserByIdUseCaseOutput>, GetUserByIdUseCase>();
 #endregion
 
 #region Register Repository
@@ -52,7 +56,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 #endregion
 
 #region Register Mapper
-
+builder.Services.AddScoped<GetUserUseCaseMapping>();
 #endregion
 builder.Services.AddCors(options =>
 {
@@ -100,7 +104,6 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
     };
 });
-
 builder.Services.AddMemoryCache();
 var emailConfig = configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
 builder.Services.AddSingleton(emailConfig);
