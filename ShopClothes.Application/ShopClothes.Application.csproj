@@ -25,4 +25,11 @@
     <ProjectReference Include="..\ShopClothes.Domain\ShopClothes.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\GetProduct\" />
+    <Folder Include="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\DeleteProduct\" />
+    <Folder Include="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\UpdateProduct\" />
+    <Folder Include="UseCases\Implements\Product_UseCase\UserProduct_UseCase\" />
+  </ItemGroup>
+
 </Project>
