@@ -52,6 +52,8 @@ builder.Services.AddScoped<IRepository<RefreshToken>, Repository<RefreshToken>>(
 builder.Services.AddScoped<IRepository<ConfirmEmail>, Repository<ConfirmEmail>>();
 builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 builder.Services.AddScoped<IRepository<ProductType>, Repository<ProductType>>();
+builder.Services.AddScoped<IRepository<ProductDetail>, Repository<ProductDetail>>();
+builder.Services.AddScoped<IRepository<ProductImage>, Repository<ProductImage>>();
 
 #endregion
 
@@ -62,7 +64,6 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 
 #region Register Mapper
 builder.Services.AddScoped<GetUserUseCaseMapping>();
-builder.Services.AddScoped<CreateProductUseCaseMappingProduct>();
 #endregion
 builder.Services.AddCors(options =>
 {

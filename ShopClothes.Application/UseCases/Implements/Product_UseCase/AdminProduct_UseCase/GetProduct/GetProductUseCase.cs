@@ -13,7 +13,6 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IRepository<Product> _productRepository;
-        private readonly 
         public async Task<GetProductUseCaseOutput> ExcuteAsync(GetProductUseCaseInput input)
         {
             throw new NotImplementedException();

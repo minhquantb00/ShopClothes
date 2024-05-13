@@ -7,29 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\DeleteProduct\**" />
+    <Compile Remove="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\UpdateProduct\**" />
+    <Compile Remove="UseCases\Implements\Product_UseCase\UserProduct_UseCase\**" />
+    <EmbeddedResource Remove="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\DeleteProduct\**" />
+    <EmbeddedResource Remove="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\UpdateProduct\**" />
+    <EmbeddedResource Remove="UseCases\Implements\Product_UseCase\UserProduct_UseCase\**" />
+    <None Remove="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\DeleteProduct\**" />
+    <None Remove="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\UpdateProduct\**" />
+    <None Remove="UseCases\Implements\Product_UseCase\UserProduct_UseCase\**" />
+  </ItemGroup>
+
+  <ItemGroup>
 	  <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />	      
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="CloudinaryDotNet" Version="1.26.2" />
     <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="ImageProcessor" Version="2.9.0" />
     <PackageReference Include="MailKit" Version="4.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
     <PackageReference Include="MimeKit" Version="4.4.0" />
     <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.4" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ShopClothes.Domain\ShopClothes.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\GetProduct\" />
-    <Folder Include="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\DeleteProduct\" />
-    <Folder Include="UseCases\Implements\Product_UseCase\AdminProduct_UseCase\UpdateProduct\" />
-    <Folder Include="UseCases\Implements\Product_UseCase\UserProduct_UseCase\" />
   </ItemGroup>
 
 </Project>
