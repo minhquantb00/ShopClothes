@@ -39,5 +39,10 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.GetUser
             response.DataResponseUser = query.Select(item => _mapper.EntityToDTO(item));
             return response;
         }
+
+        public Task<GetUserUseCaseOutput> ExcuteAsync(int? id, GetUserUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

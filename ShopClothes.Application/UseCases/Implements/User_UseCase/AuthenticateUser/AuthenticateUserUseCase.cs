@@ -63,5 +63,10 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateU
                 return response;
             }
         }
+
+        public Task<AuthenticateUserUseCaseOutput> ExcuteAsync(int? id, AuthenticateUserUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

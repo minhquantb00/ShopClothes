@@ -51,5 +51,10 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreate
                 return response;
             }
         }
+
+        public Task<ConfirmCreateNewPasswordUserUseCaseOutput> ExcuteAsync(int? id, ConfirmCreateNewPasswordUserUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

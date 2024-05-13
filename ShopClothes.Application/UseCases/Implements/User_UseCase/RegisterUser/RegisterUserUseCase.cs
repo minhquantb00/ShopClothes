@@ -95,6 +95,12 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.RegisterUser
                 throw;
             }
         }
+
+        public Task<RegisterUserUseCaseOutput> ExcuteAsync(int? id, RegisterUserUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
+
         private string GenerateCodeActive()
         {
             return "MyBugsShop_" + DateTime.Now.Ticks.ToString();

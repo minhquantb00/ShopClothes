@@ -58,5 +58,10 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.ForgotPasswor
                 return response;
             }
         }
+
+        public Task<ForgotPasswordUserUseCaseOuput> ExcuteAsync(int? id, ForgotPasswordUserUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

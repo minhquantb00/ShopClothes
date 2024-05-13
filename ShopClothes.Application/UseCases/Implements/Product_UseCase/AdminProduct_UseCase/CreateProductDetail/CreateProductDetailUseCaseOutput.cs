@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductDetail
 {
-    internal class CreateProductDetailUseCaseOutput
+    public class CreateProductDetailUseCaseOutput : UseCaseOutputBase
     {
     }
 }

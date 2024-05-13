@@ -152,6 +152,11 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser
             range.GetBytes(randomNumber);
             return Convert.ToBase64String(randomNumber);
         }
+
+        public Task<LoginUserUseCaseOutput> ExcuteAsync(int? id, LoginUserUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

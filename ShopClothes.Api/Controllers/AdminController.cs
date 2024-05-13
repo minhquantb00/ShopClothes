@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using ShopClothes.Application.ApplicationConstant;
 using ShopClothes.Application.UseCases;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProduct;
+using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductDetail;
+using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductImage;
 
 namespace ShopClothes.Api.Controllers
 {
@@ -25,6 +27,34 @@ namespace ShopClothes.Api.Controllers
             var useCase = _serviceProvider.GetService<IUseCase<CreateProductUseCaseInput, CreateProductUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(input);
             if(!result.Succeeded)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Consumes(contentType: "multipart/form-data")]
+        public async Task<IActionResult> CreateProductImage(int? id, [FromForm] List<CreateProductImageUseCaseInput> input)
+        {
+            var useCase = _serviceProvider.GetService<IUseCase<List<CreateProductImageUseCaseInput>, CreateProductImageUseCaseOutput>>();
+            var result = await useCase.ExcuteAsync(id, input);
+            if (!result.Succeeded)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Consumes(contentType: "multipart/form-data")]
+        public async Task<IActionResult> CreateProductDetail(int? id, [FromForm] List<CreateProductDetailUseCaseInput> input)
+        {
+            var useCase = _serviceProvider.GetService<IUseCase<List<CreateProductDetailUseCaseInput>, CreateProductDetailUseCaseOutput>>();
+            var result = await useCase.ExcuteAsync(id, input);
+            if (!result.Succeeded)
             {
                 return BadRequest(result);
             }

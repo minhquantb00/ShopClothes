@@ -10,6 +10,8 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
 {
     public class CreateProductDetailUseCaseInput
     {
+        [Required(ErrorMessage = "ProductId is required")]
+        public int ProductId { get; set; }
         [DataType(DataType.Upload)]
         public IFormFile Image { get; set; }
         public int ColorId { get; set; }

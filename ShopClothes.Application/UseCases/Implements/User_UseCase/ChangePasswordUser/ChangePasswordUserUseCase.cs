@@ -62,5 +62,10 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswor
                 return response;
             }
         }
+
+        public Task<ChangePasswordUserUseCaseOutput> ExcuteAsync(int? id, ChangePasswordUserUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

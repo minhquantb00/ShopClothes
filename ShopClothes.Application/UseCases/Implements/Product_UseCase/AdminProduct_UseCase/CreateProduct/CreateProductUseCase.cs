@@ -81,5 +81,9 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
             }
         }
 
+        public Task<CreateProductUseCaseOutput> ExcuteAsync(int? id, CreateProductUseCaseInput input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
