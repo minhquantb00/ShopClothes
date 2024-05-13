@@ -10,8 +10,8 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
     public class GetProductUseCaseInput
     {
         public string? Keyword { get; set; }
-        public decimal? PriceForm { get; set; }
-        public decimal? PriceTo { get; set; }
+        public double? PriceForm { get; set; }
+        public double? PriceTo { get; set; }
         public int? ProductTypeId { get; set; }
     }
 }

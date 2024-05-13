@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ShopClothes.Application.ApplicationConstant;
 using ShopClothes.Application.UseCases;
+using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.GetProduct;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.GetUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.GetUserById;
 
@@ -32,6 +33,17 @@ namespace ShopClothes.Api.Controllers
         {
             var useCase = _serviceProvider.GetService<IUseCaseGetById<int, GetUserByIdUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(id);
+            if (!result.Succeeded)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAllProducts([FromQuery] GetProductUseCaseInput input)
+        {
+            var useCase = _serviceProvider.GetService<IUseCase<GetProductUseCaseInput, GetProductUseCaseOutput>>();
+            var result = await useCase.ExcuteAsync(input);
             if (!result.Succeeded)
             {
                 return BadRequest(result);

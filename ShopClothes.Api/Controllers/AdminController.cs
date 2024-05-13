@@ -36,9 +36,9 @@ namespace ShopClothes.Api.Controllers
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Consumes(contentType: "multipart/form-data")]
-        public async Task<IActionResult> CreateProductImage(int? id, [FromForm] List<CreateProductImageUseCaseInput> input)
+        public async Task<IActionResult> CreateProductImage(int? id, [FromForm] CreateProductImageUseCaseInput input)
         {
-            var useCase = _serviceProvider.GetService<IUseCase<List<CreateProductImageUseCaseInput>, CreateProductImageUseCaseOutput>>();
+            var useCase = _serviceProvider.GetService<IUseCase<CreateProductImageUseCaseInput, CreateProductImageUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(id, input);
             if (!result.Succeeded)
             {
@@ -50,9 +50,9 @@ namespace ShopClothes.Api.Controllers
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Consumes(contentType: "multipart/form-data")]
-        public async Task<IActionResult> CreateProductDetail(int? id, [FromForm] List<CreateProductDetailUseCaseInput> input)
+        public async Task<IActionResult> CreateProductDetail(int? id, [FromForm] CreateProductDetailUseCaseInput input)
         {
-            var useCase = _serviceProvider.GetService<IUseCase<List<CreateProductDetailUseCaseInput>, CreateProductDetailUseCaseOutput>>();
+            var useCase = _serviceProvider.GetService<IUseCase<CreateProductDetailUseCaseInput, CreateProductDetailUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(id, input);
             if (!result.Succeeded)
             {

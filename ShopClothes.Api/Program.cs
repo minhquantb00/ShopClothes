@@ -11,6 +11,7 @@ using ShopClothes.Application.UseCases;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProduct;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductDetail;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductImage;
+using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.GetProduct;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreateNewPasswordUser;
@@ -43,8 +44,9 @@ builder.Services.AddScoped<IUseCase<ConfirmCreateNewPasswordUserUseCaseInput, Co
 builder.Services.AddScoped<IUseCase<GetUserUseCaseInput, GetUserUseCaseOutput>, GetUserUseCase>();
 builder.Services.AddScoped<IUseCaseGetById<int, GetUserByIdUseCaseOutput>, GetUserByIdUseCase>();
 builder.Services.AddScoped<IUseCase<CreateProductUseCaseInput, CreateProductUseCaseOutput>, CreateProductUseCase>();
-builder.Services.AddScoped<IUseCase<List<CreateProductImageUseCaseInput>, CreateProductImageUseCaseOutput>, CreateProductImageUseCase>();
-builder.Services.AddScoped<IUseCase<List<CreateProductDetailUseCaseInput>, CreateProductDetailUseCaseOutput>, CreateProductDetailUseCase>();
+builder.Services.AddScoped<IUseCase<CreateProductImageUseCaseInput, CreateProductImageUseCaseOutput>, CreateProductImageUseCase>();
+builder.Services.AddScoped<IUseCase<CreateProductDetailUseCaseInput, CreateProductDetailUseCaseOutput>, CreateProductDetailUseCase>();
+builder.Services.AddScoped<IUseCase<GetProductUseCaseInput, GetProductUseCaseOutput>, GetProductUseCase>();
 #endregion
 
 #region Register Repository
@@ -58,6 +60,8 @@ builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 builder.Services.AddScoped<IRepository<ProductType>, Repository<ProductType>>();
 builder.Services.AddScoped<IRepository<ProductDetail>, Repository<ProductDetail>>();
 builder.Services.AddScoped<IRepository<ProductImage>, Repository<ProductImage>>();
+builder.Services.AddScoped<IRepository<Color>, Repository<Color>>();
+builder.Services.AddScoped<IRepository<Size>, Repository<Size>>();
 
 #endregion
 
@@ -68,6 +72,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 
 #region Register Mapper
 builder.Services.AddScoped<GetUserUseCaseMapping>();
+builder.Services.AddScoped<GetProductUseCaseMappingProduct>();
 #endregion
 builder.Services.AddCors(options =>
 {
