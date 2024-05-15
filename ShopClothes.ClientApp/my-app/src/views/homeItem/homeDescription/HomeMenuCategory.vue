@@ -1,19 +1,4 @@
 <template>
-  <!-- <v-slide-group v-model="model" center-active show-arrows>
-    <v-slide-group-item v-for="n in listCategory" :key="n.id" class="">
-        <v-card class="mb-5" style="border:none; box-shadow: none; margin-right: 50px;">
-          <v-img height="250" :src="n.image" inherit></v-img>
-
-          <v-card-title class="text-h6 text-center">{{
-            n.name
-          }}</v-card-title>
-
-          <v-card-subtitle class="text-center">
-            {{ n.quantity }} sản phẩm
-          </v-card-subtitle>
-        </v-card>
-    </v-slide-group-item>
-  </v-slide-group> -->
   <v-sheet
     class="mx-auto"
   >
@@ -22,7 +7,7 @@
       class="pa-4"
       center-active
       show-arrows="hover"
-    
+
     >
       <v-slide-group-item
         v-for="n in listCategory"
@@ -37,11 +22,11 @@
             <v-scale-transition style="border: none; box-shadow: none;">
               <v-card class="mb-5 mr-2" style="cursor: pointer;">
                 <v-img height="250" :src="n.image" inherit></v-img>
-      
+
                 <v-card-title class="text-h6 text-center">{{
                   n.name
                 }}</v-card-title>
-      
+
                 <v-card-subtitle class="text-center">
                   {{ n.quantity }} sản phẩm
                 </v-card-subtitle>

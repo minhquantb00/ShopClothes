@@ -97,28 +97,24 @@ export default {
         this.loading = true;
         const result = await this.authenticateApi.login(this.inputLogin);
         if (result.status === 200) {
-          console.log("vào đây chưa")
           this.emitter.emit("showAlert", {
             type: "success",
             content: "Đăng nhập thành công",
           });
           if (!localStorage.getItem("accessToken")) {
-            console.log("rồi đây nữa")
             const resultToken = result.data;
             const resultEnd = resultToken.data
             localStorage.setItem("accessToken", resultEnd.accessToken);
             localStorage.setItem("refreshToken", resultEnd.refreshToken);
             const accessToken = localStorage.getItem("accessToken");
-            console.log('đây nữa')
             let decoded = this.parseJwt(accessToken);
-            
+
             localStorage.setItem("userInfo", JSON.stringify(decoded));
             const userInfo = JSON.parse(localStorage.getItem("userInfo"))
-            console.log(userInfo)
           }
           this.loading = true
           this.router.push({ path: "/" });
-          
+
         } else {
           const alert = {
             type: "error",

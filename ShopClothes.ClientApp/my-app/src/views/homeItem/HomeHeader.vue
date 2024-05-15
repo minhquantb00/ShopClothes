@@ -50,7 +50,7 @@
           <div v-if="userInfo" style="width: 100%; margin-right: 400px">
             <v-btn style="margin-right: 20px; font-size: 16px">
               <v-icon>mdi-heart</v-icon>
-              <p style="margin-left: 10px; text-transform: capitalize">
+              <p style="margin-left: 10px; margin-top: 10px; text-transform: capitalize">
                 Giỏ hàng
               </p>
             </v-btn>
@@ -71,7 +71,7 @@
                   >
                     <v-avatar
                       size="50"
-                      image="https://res-console.cloudinary.com/dacc055vz/media_explorer_thumbnails/8d1680b8c08e837e20c46e7f9c0f29b8/detailed"
+                      :image="user.avatarUrl"
                     ></v-avatar>
                   </v-btn>
                 </template>
@@ -80,7 +80,7 @@
                   <v-list>
                     <v-list-item
                       class="user-list-item"
-                      prepend-avatar="https://res-console.cloudinary.com/dacc055vz/media_explorer_thumbnails/8d1680b8c08e837e20c46e7f9c0f29b8/detailed"
+                      :prepend-avatar="user.avatarUrl"
                       :subtitle="userInfo.Email"
                       :title="userInfo.FullName"
                     >
@@ -146,14 +146,17 @@
 </template>
 
 <script>
+import { authApi } from '../../apis/Auth/authApi'
 export default {
   data() {
     return {
       dialogVisible: false,
+      authenticationApi: authApi(),
       userInfo: localStorage.getItem("userInfo")
         ? JSON.parse(localStorage.getItem("userInfo"))
         : null,
       menu: false,
+      user:{}
     };
   },
   methods: {
@@ -163,8 +166,17 @@ export default {
       localStorage.removeItem("userInfo");
     },
   },
+  async mounted() {
+    const valueReturn = await this.authenticationApi.getUserById(this.userInfo.Id)
+    console.log(this.userInfo)
+    const result = valueReturn.data
+    console.log(result)
+    console.log(result.dataResponseUser)
+    this.user = result.dataResponseUser
+
+  },
 };
-</script>
+</script>s
 
 <style lang="css" scoped>
 .set-app-bar {

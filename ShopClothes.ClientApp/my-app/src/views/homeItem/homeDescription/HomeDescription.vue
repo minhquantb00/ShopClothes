@@ -1,5 +1,5 @@
 <template>
-  <div class="home-description container-xl">
+  <div class="home-description">
     <v-container>
       <v-row>
         <v-col v-for="info in information" :key="info.id">

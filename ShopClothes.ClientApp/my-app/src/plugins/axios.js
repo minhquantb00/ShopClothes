@@ -2,7 +2,7 @@ import router from "../router/index";
 import axios from "axios";
 
 const axiosIns = axios.create({
-  baseURL: 'https://localhost:7048/api/',
+  baseURL: 'https://localhost:44333/api/',
   headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",

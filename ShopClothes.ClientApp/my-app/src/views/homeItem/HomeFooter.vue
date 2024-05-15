@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-grey-lighten-1" style="min-height: 500px">
+  <v-footer class="bg-grey-lighten-1" style="min-height: 400px">
     <v-container>
       <div class="footer-item">
         <div style="text-align: left">

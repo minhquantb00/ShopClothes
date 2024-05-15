@@ -51,6 +51,18 @@ export const authApi = defineStore("authApi", {
               reject(error)
             })
       })
+    },
+
+    getUserById(id){
+      return new Promise((resolve, reject) => {
+        axiosIns.get(`User/GetUserById/${id}`)
+        .then((res) => {
+          resolve(res)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+      })
     }
   },
 });

@@ -1,5 +1,5 @@
 <template>
-  <div id="content-course" class="container-xl">
+  <div id="content-course">
     <div class="slider">
       <v-carousel
         show-arrows="hover"
@@ -18,7 +18,7 @@
         ></v-carousel-item>
       </v-carousel>
     </div>
-    <div fluid class="container" style="margin: 0 340px">
+    <div fluid  style="margin: 0 340px">
       <home-description style="margin-top: 40px;"/>
       <home-menu-category style="margin-top: 40px"/>
       <home-list-product style="margin: 40px 0"/>
