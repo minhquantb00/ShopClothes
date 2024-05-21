@@ -88,6 +88,14 @@ export default {
         currency: "VND",
       });
     },
+    async handleRouterClick(id){
+      try {
+        const response = await this.productApi.getProductById(id);
+      } catch (error) {
+        console.error("Đã xảy ra lỗi khi gọi API:", error);
+        // this.$router.push("/error");
+      }
+    }
   },
   computed: {
     paginatedData() {

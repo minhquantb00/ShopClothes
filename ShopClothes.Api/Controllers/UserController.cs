@@ -50,5 +50,16 @@ namespace ShopClothes.Api.Controllers
             }
             return Ok(result);
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProductById([FromRoute] int id)
+        {
+            var useCase = _serviceProvider.GetService<IUseCaseGetById<int, GetProductUseCaseOutput>>();
+            var result = await useCase.ExcuteAsync(id);
+            if (!result.Succeeded)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }

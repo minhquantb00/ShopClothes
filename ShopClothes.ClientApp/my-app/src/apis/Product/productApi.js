@@ -1,7 +1,6 @@
 import axiosIns from "../../plugins/axios";
 import { defineStore } from "pinia";
 
-const CONTROLLER_NAME = "Product";
 
 export const productApi = defineStore("productApi", {
   actions: {
@@ -17,5 +16,17 @@ export const productApi = defineStore("productApi", {
           });
       });
     },
+    getProductById(id){
+      return new Promise((resolve, reject) => {
+        axiosIns
+          .get(`User/GetProductById/${id}`)
+          .then((res) => {
+            resolve(res);
+          })
+          .catch((error) => {
+            reject(error)
+          })
+      })
+    }
   },
 });

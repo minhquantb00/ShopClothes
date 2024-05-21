@@ -138,6 +138,7 @@ export default {
   components: { HomeHeader, HomeFooter },
   data() {
     return {
+      productDetail: {},
       listImage: [
         {
           id: 1,

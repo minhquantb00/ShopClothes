@@ -170,10 +170,7 @@ export default {
     const valueReturn = await this.authenticationApi.getUserById(this.userInfo.Id)
     console.log(this.userInfo)
     const result = valueReturn.data
-    console.log(result)
-    console.log(result.dataResponseUser)
     this.user = result.dataResponseUser
-
   },
 };
 </script>s

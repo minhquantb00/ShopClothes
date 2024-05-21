@@ -12,6 +12,7 @@ using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_U
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductDetail;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductImage;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.GetProduct;
+using ShopClothes.Application.UseCases.Implements.Product_UseCase.GetProductById;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreateNewPasswordUser;
@@ -46,6 +47,7 @@ builder.Services.AddScoped<IUseCase<CreateProductUseCaseInput, CreateProductUseC
 builder.Services.AddScoped<IUseCase<CreateProductImageUseCaseInput, CreateProductImageUseCaseOutput>, CreateProductImageUseCase>();
 builder.Services.AddScoped<IUseCase<CreateProductDetailUseCaseInput, CreateProductDetailUseCaseOutput>, CreateProductDetailUseCase>();
 builder.Services.AddScoped<IUseCase<GetProductUseCaseInput, GetProductUseCaseOutput>, GetProductUseCase>();
+builder.Services.AddScoped<IUseCaseGetById<int, GetProductByIdUseCaseOutput>, GetProductByIdUseCase>();
 #endregion
 
 #region Register Repository
