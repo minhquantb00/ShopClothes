@@ -28,6 +28,7 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
         {
             return new DataResponseProduct
             {
+                Id = product.Id,
                 AverageRating = product.AverageRating,
                 PriceAfterDiscount = product.PriceAfterDiscount,
                 CreateTime = product.CreateTime,

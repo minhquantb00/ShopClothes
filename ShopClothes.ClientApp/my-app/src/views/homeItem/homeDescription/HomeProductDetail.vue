@@ -35,7 +35,7 @@
             <VCardText
               style="padding: 0; font-weight: bold; font-size: 18px; color: red"
             >
-              Giá: {{ formatCurrency(120000) }}
+              Giá: {{ formatCurrency(productDetail.priceAfterDiscount) }}
               <div
                 style="
                   padding: 4px 8px;
@@ -52,7 +52,7 @@
             </VCardText>
             <VCardText style="padding: 10px 0"
               >Giá gốc:
-              <p class="compare-price">{{ formatCurrency(120000) }}</p>
+              <p class="compare-price">{{ formatCurrency(productDetail.price) }}</p>
             </VCardText>
           </div>
           <div class="product-promotion">
@@ -134,36 +134,34 @@
 <script>
 import HomeHeader from "./../HomeHeader.vue";
 import HomeFooter from "../HomeFooter.vue";
+import { productApi } from '../../../apis/Product/productApi';
+
 export default {
   components: { HomeHeader, HomeFooter },
   data() {
     return {
       productDetail: {},
+      productApi: productApi(),
       listImage: [
         {
           id: 1,
-          image:
-            "https://product.hstatic.net/1000341902/product/2403wts41_black___2403wb42_white__2__6b2e562aa0094a959f2beabd89ebf194_compact.jpg",
+          image: "https://product.hstatic.net/1000341902/product/2403wts41_black___2403wb42_white__2__6b2e562aa0094a959f2beabd89ebf194_compact.jpg",
         },
         {
           id: 2,
-          image:
-            "https://product.hstatic.net/1000341902/product/2403wts41_black___2403wb42_white__1__5a893e8ed31e4aabba79c510a725befa_compact.jpg",
+          image: "https://product.hstatic.net/1000341902/product/2403wts41_black___2403wb42_white__1__5a893e8ed31e4aabba79c510a725befa_compact.jpg",
         },
         {
           id: 3,
-          image:
-            "https://product.hstatic.net/1000341902/product/2403wts41_white_b5bedbd57fb14cb1b045d7685415fa92_compact.jpg",
+          image: "https://product.hstatic.net/1000341902/product/2403wts41_white_b5bedbd57fb14cb1b045d7685415fa92_compact.jpg",
         },
         {
           id: 4,
-          image:
-            "https://product.hstatic.net/1000341902/product/2403wts41_white___2403wb42_navy__8f37f4a26b3f43f2a7a3bbe9e0e896af_compact.jpg",
+          image: "https://product.hstatic.net/1000341902/product/2403wts41_white___2403wb42_navy__8f37f4a26b3f43f2a7a3bbe9e0e896af_compact.jpg",
         },
         {
           id: 5,
-          image:
-            "https://product.hstatic.net/1000341902/product/2403wts41_white__1__434d893709cc4d3ca896c7aecad32ce7_compact.jpg",
+          image: "https://product.hstatic.net/1000341902/product/2403wts41_white__1__434d893709cc4d3ca896c7aecad32ce7_compact.jpg",
         },
       ],
       listColor: [
@@ -199,45 +197,28 @@ export default {
     };
   },
   methods: {
-    formatDate(dateString) {
-      const date = new Date(dateString);
-      const day = date.getDate();
-      const month = date.getMonth() + 1;
-      const year = date.getFullYear();
-      const hours = date.getHours();
-      const minutes = date.getMinutes();
-      const seconds = date.getSeconds();
-      const formattedDay = day < 10 ? "0" + day : day;
-      const formattedMonth = month < 10 ? "0" + month : month;
-      const formattedHours = hours < 10 ? "0" + hours : hours;
-      const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-      const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
-
-      return `${formattedDay}/${formattedMonth}/${year}`;
-    },
     formatCurrency(value) {
-      // Chuyển đổi giá trị sang kiểu số nguyên
       const intValue = parseInt(value);
-
-      // Sử dụng hàm toLocaleString để định dạng giá tiền theo tiêu chuẩn của quốc gia
       return intValue.toLocaleString("vi-VN", {
         style: "currency",
         currency: "VND",
       });
     },
   },
-  computed: {
-    paginatedData() {
-      const start = (this.currentPage - 1) * this.perPage;
-      const end = start + this.perPage;
-      return this.dataProduct.slice(start, end);
-    },
-    totalPages() {
-      return Math.ceil(this.dataProduct.length / this.perPage);
-    },
+  async mounted() {
+    const id = this.$route.params.id;
+    console.log(id)
+    try {
+      const valueReturn = await this.productApi.getProductById(id);
+      const result = valueReturn.data;
+      this.productDetail = result.dataResponseProduct;
+    } catch (error) {
+      console.error("Đã xảy ra lỗi khi gọi API:", error);
+    }
   },
 };
 </script>
+
 
 <style scoped>
 input[type="radio"] {

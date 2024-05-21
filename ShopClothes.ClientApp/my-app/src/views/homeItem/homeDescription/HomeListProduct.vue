@@ -1,26 +1,35 @@
 <template>
   <div>
-    <h1 style="margin-bottom: 20px;">NEW ARRIVAL - MyBugsShop</h1>
+    <h1 style="margin-bottom: 20px">NEW ARRIVAL - MyBugsShop</h1>
     <VRow>
       <VCol
         cols="12"
         sm="2"
         md="2"
-        v-for="(product, index) in paginatedData"
-        :key="index"
+        v-for="product in paginatedData"
+        :key="product.id"
       >
-        <VCard style="border: none; box-shadow: none; cursor: pointer;">
-          <VImg :src="product.imageUrl" cover height="30em" />
+        <router-link
+          :to="`/product-detail/${product.id}`"
+          @click="handleRouterLinkClick(product.id)"
+        >
+          <VCard style="border: none; box-shadow: none; cursor: pointer">
+            <VImg :src="product.imageUrl" cover height="30em" />
 
-          <VCardTitle style="margin: 10px 0; padding: 0">{{ product.productName }}</VCardTitle>
-          <VCardText style="padding: 0; font-weight:bold; font-size:18px; color: red"> Giá: {{ formatCurrency(product.priceAfterDiscount) }}</VCardText>
-          <VCardText
-          style="padding: 10px 0"
-            >Giá gốc:
-            <p class="compare-price">{{ formatCurrency(product.price) }}</p>
-            </VCardText
-          >
-        </VCard>
+            <VCardTitle style="margin: 10px 0; padding: 0">{{
+              product.productName
+            }}</VCardTitle>
+            <VCardText
+              style="padding: 0; font-weight: bold; font-size: 18px; color: red"
+            >
+              Giá: {{ formatCurrency(product.priceAfterDiscount) }}</VCardText
+            >
+            <VCardText style="padding: 10px 0"
+              >Giá gốc:
+              <p class="compare-price">{{ formatCurrency(product.price) }}</p>
+            </VCardText>
+          </VCard>
+        </router-link>
       </VCol>
     </VRow>
     <div class="text-center mt-4">
@@ -34,7 +43,7 @@
 </template>
 
 <script>
-import  { productApi } from '../../../apis/Product/productApi'
+import { productApi } from "../../../apis/Product/productApi";
 export default {
   data() {
     return {
@@ -44,23 +53,23 @@ export default {
       productApi: productApi(),
       dataProduct: [],
       page: 1,
-      loading:  false
+      loading: false,
     };
   },
   async mounted() {
     setTimeout(() => {
       this.loading = false;
-    }, 2000)
+    }, 2000);
     const params = {
-      keyword: '',
+      keyword: "",
       productTypeId: 0,
       priceTo: 0,
-      priceForm: 0
-    }
+      priceForm: 0,
+    };
     const valueReturn = await this.productApi.getAllProducts(params);
-    const result = valueReturn.data
-    console.log(result.dataResponseProducts)
-    this.dataProduct = result.dataResponseProducts
+    const result = valueReturn.data;
+    console.log(result.dataResponseProducts);
+    this.dataProduct = result.dataResponseProducts;
   },
   methods: {
     formatDate(dateString) {
@@ -88,14 +97,14 @@ export default {
         currency: "VND",
       });
     },
-    async handleRouterClick(id){
+    async handleRouterLinkClick(id) {
       try {
+        console.log(id)
         const response = await this.productApi.getProductById(id);
       } catch (error) {
         console.error("Đã xảy ra lỗi khi gọi API:", error);
-        // this.$router.push("/error");
       }
-    }
+    },
   },
   computed: {
     paginatedData() {

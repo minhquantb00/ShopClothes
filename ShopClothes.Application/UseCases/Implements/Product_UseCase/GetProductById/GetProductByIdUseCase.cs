@@ -21,10 +21,12 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.GetProduct
         }
         public async Task<GetProductByIdUseCaseOutput> ExcuteAsync(int id)
         {
+            var result = _mapper.EntityToDTO(_productRepository.GetByIdAsync(id).Result);
+
             GetProductByIdUseCaseOutput response = new GetProductByIdUseCaseOutput
             {
                 Succeeded = true,
-                DataResponseProduct = _mapper.EntityToDTO(_productRepository.GetByIdAsync(id).Result)
+                DataResponseProduct = result
             };
             return response;
         }
