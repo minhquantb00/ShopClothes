@@ -47,12 +47,13 @@
             />
           </div>
 
-          <div v-if="userInfo" style="width: 100%; margin-right: 400px">
-            <v-btn style="margin-right: 20px; font-size: 16px">
+          <div v-if="userInfo" style="width: 100%; margin-right: 400px; margin-bottom: 4px;">
+            <v-btn style="margin-right: 20px; font-size: 16px; position:relative">
               <v-icon>mdi-heart</v-icon>
               <p style="margin-left: 10px; margin-top: 10px; text-transform: capitalize">
                 Giỏ hàng
               </p>
+              <span class="number-cart">{{ quantityCart }}</span>
             </v-btn>
 
             <v-btn icon>
@@ -86,31 +87,28 @@
                     >
                     </v-list-item>
                   </v-list>
-                  <v-divider></v-divider>
 
                   <v-list>
-                    <v-list-item>
+                    <v-list-item style="cursor:pointer">
                       <v-title> Giỏ hàng của tôi </v-title>
                       <template v-slot:append>
-                        <v-badge color="purple" content="6" inline></v-badge>
+                        <v-badge color="purple" content="0" inline></v-badge>
                       </template>
                     </v-list-item>
                   </v-list>
-                  <v-divider></v-divider>
-                  <v-list-item>
+                  <v-list-item style="cursor:pointer">
                     <v-title> Thông báo </v-title>
                     <template v-slot:append>
-                      <v-badge color="purple" content="6" inline></v-badge>
+                      <v-badge color="purple" content="0" inline></v-badge>
                     </template>
                   </v-list-item>
-                  <v-list-item>
+                  <v-list-item style="cursor:pointer">
                     <v-title> Tin nhắn </v-title>
                     <template v-slot:append>
-                      <v-badge color="purple" content="6" inline></v-badge>
+                      <v-badge color="purple" content="0" inline></v-badge>
                     </template>
                   </v-list-item>
 
-                  <v-divider></v-divider>
                   <a href="/">
                     <v-btn
                       :disabled="loading"
@@ -128,7 +126,7 @@
           <div
             v-else
             class="d-flex mt-2 ml-7"
-            style="align-items: center; margin-right: 400px"
+            style="align-items: center; margin-right: 400px; margin-bottom: 10px;"
           >
             <router-link to="/login" class="account-link">
               <v-btn variant="outlined" class="ma-2"> Đăng nhập </v-btn>
@@ -147,6 +145,8 @@
 
 <script>
 import { authApi } from '../../apis/Auth/authApi'
+import { computed } from 'vue';
+import eventBus from '../../plugins/eventBus'
 export default {
   data() {
     return {
@@ -156,8 +156,13 @@ export default {
         ? JSON.parse(localStorage.getItem("userInfo"))
         : null,
       menu: false,
-      user:{}
+      user:{},
+      quantityCart: 0,
     };
+  },
+  setup() {
+    const quantityCart = computed(() => eventBus.quantityCart || 0);
+    return { quantityCart };
   },
   methods: {
     logout() {
@@ -171,9 +176,18 @@ export default {
     console.log(this.userInfo)
     const result = valueReturn.data
     this.user = result.dataResponseUser
+    if(this.userInfo){
+      setTimeout(() => {
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+      localStorage.removeItem("userInfo");
+      location.reload()
+    }, 3600000)
+    }
+
   },
 };
-</script>s
+</script>
 
 <style lang="css" scoped>
 .set-app-bar {
@@ -353,5 +367,14 @@ export default {
 }
 .header-content-user-link:hover {
   color: blueviolet;
+}
+.number-cart{
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+  right: -12px;
+  top: -6px;
 }
 </style>

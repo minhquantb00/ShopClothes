@@ -10,6 +10,7 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
 {
     public class DataResponseProductDetail
     {
+        public int Id { get; set; }
         public int InventoryNumber { get; set; }
         public int SoldQuantity { get; set; }
         public int ReturnQuantity { get; set; }
@@ -17,7 +18,7 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
         public string Image { get; set; }
         public DateTime CreateTime { get; set; }
         public DateTime? UpdateTime { get; set; }
-        public string ColorName { get; set; }
+        public string ColorCode { get; set; }
         public string SizeName { get; set; }
     }
 }

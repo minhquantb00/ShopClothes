@@ -12,7 +12,7 @@
         <router-link
           :to="`/product-detail/${product.id}`"
           @click="handleRouterLinkClick(product.id)"
-        >
+        style="text-decoration: none" >
           <VCard style="border: none; box-shadow: none; cursor: pointer">
             <VImg :src="product.imageUrl" cover height="30em" />
 

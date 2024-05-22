@@ -46,7 +46,8 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
                 UpdateTime = product.UpdateTime,
                 ProductDetails = _productDetailRepository.GetAllAsync(record => record.ProductId == product.Id).Result.Select(item => new DataResponseProductDetail
                 {
-                    ColorName = _colorRepository.GetByIdAsync(item.ColorId).Result.ColorName,
+                    Id = item.Id,
+                    ColorCode = _colorRepository.GetByIdAsync(item.ColorId).Result.ColorCode,
                     CreateTime = item.CreateTime,
                     Image = item.Image,
                     InventoryNumber = item.InventoryNumber,
@@ -58,6 +59,7 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
                 }).AsQueryable(),
                 ProductImages = _productImageRepository.GetAllAsync(record => record.ProductId == product.Id).Result.Select(item => new DataResponseProductImage
                 {
+                    Id = item.Id,
                     ImageUrl = item.ImageUrl
                 }).AsQueryable(),
             };

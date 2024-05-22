@@ -12,21 +12,17 @@
               height="auto"
               style="margin-bottom: 10px"
               cover
-              :src="item.image"
+              :src="item.imageUrl"
             />
           </div>
         </div>
 
         <div class="big-image">
-          <v-img
-            width="100%"
-            height="auto"
-            src="https://product.hstatic.net/1000341902/product/2403wts41_black___2403wb42_white__2__6b2e562aa0094a959f2beabd89ebf194.jpg"
-          />
+          <v-img width="100%" height="auto" :src="productDetail.imageUrl" />
         </div>
 
         <div class="description-product">
-          <h1>Áo ôm thun bogen trễ vai</h1>
+          <h1>{{ productDetail.productName }}</h1>
           <div class="description d-flex">
             <span style="margin-right: 10px">Thương hiệu: MyBugsShop</span>
             <span>Mã sản phẩm: 2403WTS4106S</span>
@@ -52,7 +48,9 @@
             </VCardText>
             <VCardText style="padding: 10px 0"
               >Giá gốc:
-              <p class="compare-price">{{ formatCurrency(productDetail.price) }}</p>
+              <p class="compare-price">
+                {{ formatCurrency(productDetail.price) }}
+              </p>
             </VCardText>
           </div>
           <div class="product-promotion">
@@ -78,24 +76,42 @@
               <li>Và thêm các mã khuyến mãi bên dưới</li>
             </ul>
           </div>
-          <div class="select-color" >
+          <div class="select-color">
             <h4>Màu sắc sản phẩm</h4>
-            <div class="list-color d-flex" >
-              <div v-for="color in listColor" :key="color.id" >
-                <div class="color-item mr-2" >
-                  <input type="radio" name="option-0" checked="" :style="{backgroundColor: color.code}" data-gtm-form-interact-field-id="1">
-                  <label ></label>
+            <div class="d-flex">
+              <div
+                class="list-color d-flex"
+                v-for="item in listColor"
+                :key="item"
+              >
+                <div>
+                  <div class="color-item mr-2">
+                    <input
+                      type="radio"
+                      name="option-0"
+                      checked=""
+                      :style="{ backgroundColor: item }"
+                      data-gtm-form-interact-field-id="1"
+                    />
+                    <label></label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="select-size mt-8">
             <h4>Kích thước</h4>
-            <div class="list-size d-flex mt-8">
-              <div v-for="size in listSize" :key="size.id">
-                <div class="size-item">
-                  <div class="item mr-2">
-                    {{ size.name }}
+            <div class="d-flex">
+              <div
+                class="list-size d-flex mt-2"
+                v-for="item in listSize"
+                :key="item"
+              >
+                <div>
+                  <div class="size-item">
+                    <div class="item mr-2">
+                      {{ item }}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -103,30 +119,47 @@
           </div>
           <div class="add-cart d-flex mt-8">
             <div class="change-quantity d-flex">
-              <div class="decrease">
-                -
-              </div>
+              <div class="decrease" @click="handleDecreaseBuyQuantity()">-</div>
               <div class="quantity">
-                0
+                {{ quantityCart }}
               </div>
-              <div class="increase">
-                +
-              </div>
+              <div class="increase" @click="handleIncreaseBuyQuantity()">+</div>
             </div>
-            <div class="button-add-cart">
+            <div
+              class="button-add-cart"
+              style="cursor: pointer"
+              @click="addToCart()"
+            >
               Thêm vào giỏ
             </div>
           </div>
-          <div class="buy-product text-center">
-            MUA NGAY
-          </div>
-          <hr style="margin-top: 40px; color:grey"/>
+          <div class="buy-product text-center">MUA NGAY</div>
+          <hr style="margin-top: 40px; color: grey" />
           <div class="description-content">
-            <h4>Mô tả sản phẩm </h4>
+            <h4>Mô tả sản phẩm</h4>
           </div>
         </div>
       </div>
+
+      <div class="set-alert" v-if="isSuccess">
+        <v-alert
+          type="success"
+          closable
+          title="Thêm sản phẩm vào giỏ hàng thành công"
+          v-model="showAlert"
+        ></v-alert>
+      </div>
+      <div class="set-alert" v-else>
+        <v-alert
+          type="error"
+          closable
+          title="Vui lòng chọn số lượng sản phẩm muốn thêm vào giỏ hàng"
+          v-model="showAlert"
+          color="red"
+        ></v-alert>
+      </div>
     </div>
+
     <home-footer style="margin-top: 40px" />
   </div>
 </template>
@@ -134,66 +167,26 @@
 <script>
 import HomeHeader from "./../HomeHeader.vue";
 import HomeFooter from "../HomeFooter.vue";
-import { productApi } from '../../../apis/Product/productApi';
-
+import { productApi } from "../../../apis/Product/productApi";
+import eventBus from "../../../plugins/eventBus";
+import { useRouter } from "vue-router";
 export default {
   components: { HomeHeader, HomeFooter },
   data() {
     return {
       productDetail: {},
       productApi: productApi(),
-      listImage: [
-        {
-          id: 1,
-          image: "https://product.hstatic.net/1000341902/product/2403wts41_black___2403wb42_white__2__6b2e562aa0094a959f2beabd89ebf194_compact.jpg",
-        },
-        {
-          id: 2,
-          image: "https://product.hstatic.net/1000341902/product/2403wts41_black___2403wb42_white__1__5a893e8ed31e4aabba79c510a725befa_compact.jpg",
-        },
-        {
-          id: 3,
-          image: "https://product.hstatic.net/1000341902/product/2403wts41_white_b5bedbd57fb14cb1b045d7685415fa92_compact.jpg",
-        },
-        {
-          id: 4,
-          image: "https://product.hstatic.net/1000341902/product/2403wts41_white___2403wb42_navy__8f37f4a26b3f43f2a7a3bbe9e0e896af_compact.jpg",
-        },
-        {
-          id: 5,
-          image: "https://product.hstatic.net/1000341902/product/2403wts41_white__1__434d893709cc4d3ca896c7aecad32ce7_compact.jpg",
-        },
-      ],
-      listColor: [
-        {
-          id: 1,
-          code: 'black',
-          name: 'đen'
-        },
-        {
-          id: 2,
-          code: 'white',
-          name: 'trắng'
-        }
-      ],
-      listSize: [
-        {
-          id: 1,
-          name: 'S'
-        },
-        {
-          id: 2,
-          name: 'M'
-        },
-        {
-          id: 3,
-          name: 'L'
-        },
-        {
-          id: 4,
-          name: 'XL'
-        }
-      ]
+      userInfo: localStorage.getItem("userInfo")
+        ? JSON.parse(localStorage.getItem("userInfo"))
+        : null,
+      listImage: [],
+      listProductDetail: [],
+      quantityCart: 0,
+      isSuccess: false,
+      showAlert: false,
+      listSize: [],
+      listColor: [],
+      router: useRouter()
     };
   },
   methods: {
@@ -204,21 +197,66 @@ export default {
         currency: "VND",
       });
     },
+    handleIncreaseBuyQuantity() {
+      this.quantityCart++;
+    },
+    handleDecreaseBuyQuantity() {
+      if (this.quantityCart === 0) {
+        this.quantityCart = 0;
+      } else {
+        this.quantityCart--;
+      }
+    },
+    addToCart() {
+      if(!this.userInfo){
+        this.router.push({path: '/login'})
+      }
+      else{
+        if (!eventBus.quantityCart) {
+        eventBus.quantityCart = 0;
+        this.isSuccess = false;
+        this.showAlert = true;
+        setTimeout(() => {
+          this.showAlert = false;
+        }, 1500);
+      }
+      if (this.quantityCart !== 0) {
+        eventBus.quantityCart += this.quantityCart;
+        this.isSuccess = true;
+        this.showAlert = true;
+        setTimeout(() => {
+          this.showAlert = false;
+        }, 1500);
+      }
+      else{
+        this.isSuccess = false;
+        this.showAlert = true
+        setTimeout(() => {
+          this.showAlert = false;
+        }, 1500);
+      }
+      }
+    },
   },
   async mounted() {
     const id = this.$route.params.id;
-    console.log(id)
+    console.log(id);
     try {
       const valueReturn = await this.productApi.getProductById(id);
       const result = valueReturn.data;
       this.productDetail = result.dataResponseProduct;
+      this.listImage = result.dataResponseProduct.productImages;
+
+      this.listProductDetail = result.dataResponseProduct.productDetails;
+      this.listColor = this.listProductDetail.map((record) => record.colorCode);
+      this.listSize = this.listProductDetail.map((record) => record.sizeName);
+      console.log(result.dataResponseProduct);
     } catch (error) {
       console.error("Đã xảy ra lỗi khi gọi API:", error);
     }
   },
 };
 </script>
-
 
 <style scoped>
 input[type="radio"] {
@@ -242,6 +280,7 @@ input[type="radio"]:hover {
 .product-detail {
   min-height: 900px;
   padding: 0 420px;
+  position: relative;
 }
 .product-detail-item {
   display: flex;
@@ -287,29 +326,33 @@ input[type="radio"]:hover {
   background: #fff;
   font-size: 14px;
 }
-.list-size .size-item .item{
-  border: 1px solid black;
+.list-size .size-item .item {
+  border: 1px solid grey;
   padding: 8px 12px;
   border-radius: 10px;
 }
 
-.list-size .size-item:hover{
+.list-size .size-item:hover {
   cursor: pointer;
 }
-.change-quantity{
+.change-quantity {
   padding: 12px 0;
   border: 1px grey solid;
   border-radius: 4px;
   margin-right: 20px;
 }
-.decrease, .increase, .quantity{
+.decrease,
+.increase,
+.quantity {
   padding: 0 20px;
   font-size: 20px;
 }
-.decrease, .increase, .quantity:hover{
+.decrease,
+.increase,
+.quantity:hover {
   cursor: pointer;
 }
-.button-add-cart{
+.button-add-cart {
   padding: 12px 300px;
   border: 1px red solid;
   border-radius: 4px;
@@ -317,7 +360,7 @@ input[type="radio"]:hover {
   text-transform: uppercase;
   color: red;
 }
-.buy-product{
+.buy-product {
   padding: 12px 300px;
   border: 1px red solid;
   margin-top: 30px;
@@ -327,7 +370,14 @@ input[type="radio"]:hover {
   text-transform: uppercase;
   background-color: red;
 }
-.buy-product:hover{
+.buy-product:hover {
   cursor: pointer;
+}
+.set-alert {
+  width: 400px;
+  position: absolute;
+  right: 20px;
+  z-index: 10;
+  bottom: 20px;
 }
 </style>

@@ -8,6 +8,7 @@ namespace ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProdu
 {
     public class DataResponseProductImage
     {
+        public int Id { get; set; }
         public string ImageUrl { get; set; }
     }
 }
