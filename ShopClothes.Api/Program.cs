@@ -13,6 +13,8 @@ using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_U
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductImage;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.GetProduct;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.GetProductById;
+using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.GetProductReview;
+using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.MappingProductReview;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreateNewPasswordUser;
@@ -49,6 +51,7 @@ builder.Services.AddScoped<IUseCase<CreateProductDetailUseCaseInput, CreateProdu
 builder.Services.AddScoped<IUseCase<GetProductUseCaseInput, GetProductUseCaseOutput>, GetProductUseCase>();
 builder.Services.AddScoped<IUseCaseGetById<int, GetProductByIdUseCaseOutput>, GetProductByIdUseCase>();
 builder.Services.AddScoped<IUseCase<CreateProductDetailUseCaseInput, CreateProductDetailUseCaseOutput>, CreateProductDetailUseCase>();
+builder.Services.AddScoped<IUseCase<GetProductReviewUseCaseInput, GetProductReviewUseCaseOutput>, GetProductReviewUseCase>();
 #endregion
 
 #region Register Repository
@@ -65,6 +68,7 @@ builder.Services.AddScoped<IRepository<ProductImage>, Repository<ProductImage>>(
 builder.Services.AddScoped<IRepository<Color>, Repository<Color>>();
 builder.Services.AddScoped<IRepository<Size>, Repository<Size>>();
 builder.Services.AddScoped<IRepository<ProductReview>, Repository<ProductReview>>();
+builder.Services.AddScoped<IRepository<Bill>, Repository<Bill>>();
 #endregion
 
 #region Đăng ký service
@@ -75,6 +79,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 #region Register Mapper
 builder.Services.AddScoped<GetUserUseCaseMapping>();
 builder.Services.AddScoped<GetProductUseCaseMappingProduct>();
+builder.Services.AddScoped<ProductReviewConverter>();
 #endregion
 builder.Services.AddCors(options =>
 {

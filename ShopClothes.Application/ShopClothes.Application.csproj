@@ -42,6 +42,8 @@
 
   <ItemGroup>
     <Folder Include="UseCases\Implements\Cart_UseCase\" />
+    <Folder Include="UseCases\Implements\ProductReview_UseCase\GetProductReviewById\" />
+    <Folder Include="UseCases\Implements\ProductReview_UseCase\UpdateProductReview\" />
   </ItemGroup>
 
 </Project>
