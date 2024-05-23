@@ -1,64 +1,69 @@
 <template>
-  <div id="register">
-    <div class="background-register"></div>
-    <div class="background-opacity"></div>
-    <div class="main-register d-flex justify-content-evenly align-items-center">
+  <div>
+    <home-header
+      style="position: fixed; top: 0; right: 0; left: 0; z-index: 10"
+    />
+    <div id="register">
       <v-card
-        class="form-register text-white mx-auto"
-        title="Vui lòng đăng nhập tại đây!"
-      >
-        <v-container class="set-index">
-          <v-label class="input-label">Tài khoản</v-label>
-          <v-text-field
-            v-model="inputLogin.userName"
-            :rules="taiKhoanRules"
-            color="primary"
-            placeholder="Tài khoản"
-            variant="underlined"
-          ></v-text-field>
-          <v-label class="input-label">Mật khẩu</v-label>
-          <v-text-field
-            v-model="inputLogin.password"
-            color="primary"
-            :rules="passwordRules"
-            placeholder="Mật khẩu"
-            :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
-            :type="visible ? 'text' : 'password'"
-            @click:append-inner="visible = !visible"
-            @keydown.enter="login"
-            variant="underlined"
-          ></v-text-field>
-          <v-checkbox v-model="terms" color="primary" label="Nhớ mật khẩu" />
-        </v-container>
-
-        <v-card-actions class="card-action-item">
-          <v-btn color="success" :loading="loading" @click="login">
-            Đăng nhập
-            <v-icon icon="mdi-chevron-right" end></v-icon>
-          </v-btn>
-        </v-card-actions>
-
-        <v-card-text class="text-center">
-          <span class="mr-3">Bạn chưa có tài khoản?</span>
-          <v-btn
-            color="success"
-            @click="
-              () => {
-                router.push({ path: '/register' });
-              }
-            "
-            >Đăng ký</v-btn
-          >
-        </v-card-text>
-      </v-card>
+          class="form-register text-white mx-auto"
+          title="Vui lòng đăng nhập tại đây!"
+        >
+          <v-container class="set-index">
+            <v-label class="input-label">Tài khoản</v-label>
+            <v-text-field
+              v-model="inputLogin.userName"
+              :rules="taiKhoanRules"
+              color="primary"
+              placeholder="Tài khoản"
+              variant="underlined"
+            ></v-text-field>
+            <v-label class="input-label">Mật khẩu</v-label>
+            <v-text-field
+              v-model="inputLogin.password"
+              color="primary"
+              :rules="passwordRules"
+              placeholder="Mật khẩu"
+              :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
+              :type="visible ? 'text' : 'password'"
+              @click:append-inner="visible = !visible"
+              @keydown.enter="login"
+              variant="underlined"
+            ></v-text-field>
+            <v-checkbox v-model="terms" color="primary" label="Nhớ mật khẩu" />
+          </v-container>
+  
+          <v-card-actions class="card-action-item">
+            <v-btn color="success" :loading="loading" @click="login">
+              Đăng nhập
+              <v-icon icon="mdi-chevron-right" end></v-icon>
+            </v-btn>
+          </v-card-actions>
+  
+          <v-card-text class="text-center">
+            <span class="mr-3">Bạn chưa có tài khoản?</span>
+            <v-btn
+              color="success"
+              @click="
+                () => {
+                  router.push({ path: '/register' });
+                }
+              "
+              >Đăng ký</v-btn
+            >
+          </v-card-text>
+        </v-card>
     </div>
+    <home-footer style="margin-top: 40px; position:absolute; bottom: 0; right: 0; left: 0" />
   </div>
 </template>
 <script>
 import { useRouter } from "vue-router";
 import { authApi } from "../../apis/Auth/authApi";
 import mitt from "mitt";
+import HomeHeader from "@/views/homeItem/HomeHeader.vue";
+import HomeFooter from "@/views/homeItem/HomeFooter.vue";
 export default {
+  components: { HomeHeader, HomeFooter },
   data() {
     return {
       visible: false,
@@ -161,25 +166,7 @@ export default {
 <style scoped>
 #register {
   width: 100%;
-  height: 100%;
-}
-.background-register {
-  background-image: url(https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-}
-.background-opacity {
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  position: absolute;
-  top: 0;
-  z-index: 2;
+  height: 40%;
 }
 .main-register {
   width: 100%;
@@ -193,9 +180,10 @@ export default {
   width: 30%;
   border-radius: 40px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: black;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  height: 40%;
+  height: 100%;
+  margin-top: 200px;
 }
 .card-action-item {
   justify-content: space-evenly;

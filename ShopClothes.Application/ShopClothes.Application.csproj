@@ -40,4 +40,8 @@
     <ProjectReference Include="..\ShopClothes.Domain\ShopClothes.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Implements\Cart\" />
+  </ItemGroup>
+
 </Project>
