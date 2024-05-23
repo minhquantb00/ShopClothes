@@ -186,6 +186,8 @@ export default {
       showAlert: false,
       listSize: [],
       listColor: [],
+      selectColor: null,
+      selectSize: null,
       router: useRouter()
     };
   },

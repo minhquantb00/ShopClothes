@@ -48,6 +48,7 @@ builder.Services.AddScoped<IUseCase<CreateProductImageUseCaseInput, CreateProduc
 builder.Services.AddScoped<IUseCase<CreateProductDetailUseCaseInput, CreateProductDetailUseCaseOutput>, CreateProductDetailUseCase>();
 builder.Services.AddScoped<IUseCase<GetProductUseCaseInput, GetProductUseCaseOutput>, GetProductUseCase>();
 builder.Services.AddScoped<IUseCaseGetById<int, GetProductByIdUseCaseOutput>, GetProductByIdUseCase>();
+builder.Services.AddScoped<IUseCase<CreateProductDetailUseCaseInput, CreateProductDetailUseCaseOutput>, CreateProductDetailUseCase>();
 #endregion
 
 #region Register Repository
@@ -63,7 +64,7 @@ builder.Services.AddScoped<IRepository<ProductDetail>, Repository<ProductDetail>
 builder.Services.AddScoped<IRepository<ProductImage>, Repository<ProductImage>>();
 builder.Services.AddScoped<IRepository<Color>, Repository<Color>>();
 builder.Services.AddScoped<IRepository<Size>, Repository<Size>>();
-
+builder.Services.AddScoped<IRepository<ProductReview>, Repository<ProductReview>>();
 #endregion
 
 #region Đăng ký service

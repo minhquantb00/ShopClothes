@@ -12,7 +12,7 @@ namespace ShopClothes.Domain.Entities
         public virtual User? User { get; set; }
         public int ProductDetailId { get; set; }
         public virtual ProductDetail? ProductDetail { get; set; }
-        public int BillId { get; set; }
+        public string Content { get; set; }
         public string ImageUrl { get; set; }
         public int NumberOfStars { get; set; }
         public DateTime ReviewTime { get; set; }
