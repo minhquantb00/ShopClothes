@@ -29,15 +29,9 @@ namespace ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.GetP
             return response;
         }
 
-        public async Task<GetProductReviewUseCaseOutput> ExcuteAsync(int? id, GetProductReviewUseCaseInput input)
+        public Task<GetProductReviewUseCaseOutput> ExcuteAsync(int? id, GetProductReviewUseCaseInput input)
         {
-            var productReview = await _productReviewRepository.GetAllAsync(x => x.Id == id);
-            GetProductReviewUseCaseOutput response = new GetProductReviewUseCaseOutput
-            {
-                Succeeded = true,
-                ProductReviews = productReview.Select(x => _productReviewConverter.EntityToDTO(x))
-            };
-            return response;
+            throw new NotImplementedException();
         }
     }
 }

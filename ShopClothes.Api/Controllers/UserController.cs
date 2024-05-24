@@ -8,6 +8,8 @@ using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_U
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.GetProductById;
 using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.CreateProductReview;
 using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.GetProductReview;
+using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.GetProductReviewById;
+using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.UpdateProductReview;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.GetUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.GetUserById;
 
@@ -94,8 +96,20 @@ namespace ShopClothes.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductReviewById([FromRoute] int id)
         {
-            var useCase = _serviceProvider.GetService<IUseCaseGetById<int, GetProductReviewUseCaseOutput>>();
+            var useCase = _serviceProvider.GetService<IUseCaseGetById<int, GetProductReviewByIdUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(id);
+            if (!result.Succeeded)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [HttpPut]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> UpdateProductReview([FromForm] UpdateProductReviewUseCaseInput input)
+        {
+            var useCase = _serviceProvider.GetService<IUseCase<UpdateProductReviewUseCaseInput, UpdateProductReviewUseCaseOutput>>();
+            var result = await useCase.ExcuteAsync(input);
             if (!result.Succeeded)
             {
                 return BadRequest(result);
