@@ -31,14 +31,14 @@
             ></v-text-field>
             <v-checkbox v-model="terms" color="primary" label="Nhớ mật khẩu" />
           </v-container>
-  
+
           <v-card-actions class="card-action-item">
             <v-btn color="success" :loading="loading" @click="login">
               Đăng nhập
               <v-icon icon="mdi-chevron-right" end></v-icon>
             </v-btn>
           </v-card-actions>
-  
+
           <v-card-text class="text-center">
             <span class="mr-3">Bạn chưa có tài khoản?</span>
             <v-btn
@@ -98,7 +98,6 @@ export default {
   methods: {
     async login() {
       try {
-        console.log('lần 1')
         this.loading = true;
         const result = await this.authenticateApi.login(this.inputLogin);
         if (result.status === 200) {
@@ -118,7 +117,14 @@ export default {
             const userInfo = JSON.parse(localStorage.getItem("userInfo"))
           }
           this.loading = true
-          this.router.push({ path: "/" });
+          const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+
+          if(userInfo.Permission.includes("Admin")){
+            this.router.push({ path: "/admin" });
+          }
+          else{
+            this.router.push({ path: "/" });
+          }
 
         } else {
           const alert = {
@@ -140,7 +146,6 @@ export default {
       }
     },
    parseJwt(token) {
-      console.log(token)
       var base64Url = token.split(".")[1];
       var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
       var jsonPayload = decodeURIComponent(

@@ -68,7 +68,6 @@ export default {
     };
     const valueReturn = await this.productApi.getAllProducts(params);
     const result = valueReturn.data;
-    console.log(result.dataResponseProducts);
     this.dataProduct = result.dataResponseProducts;
   },
   methods: {
@@ -99,7 +98,6 @@ export default {
     },
     async handleRouterLinkClick(id) {
       try {
-        console.log(id)
         const response = await this.productApi.getProductById(id);
       } catch (error) {
         console.error("Đã xảy ra lỗi khi gọi API:", error);

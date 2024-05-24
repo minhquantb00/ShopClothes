@@ -25,6 +25,16 @@ const routes = [
     path: '/product-detail/:id',
     name: 'product-detail',
     component: () => import('../views/homeItem/homeDescription/HomeProductDetail.vue')
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('../pages/manager/HomeManager.vue')
+  },
+  {
+    path: '/product-management',
+    name: 'product-management',
+    component:() => import('../pages/manager/productManagement/ProductManagement.vue')
   }
 ];
 

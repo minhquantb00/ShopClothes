@@ -173,7 +173,6 @@ export default {
   },
   async mounted() {
     const valueReturn = await this.authenticationApi.getUserById(this.userInfo.Id)
-    console.log(this.userInfo)
     const result = valueReturn.data
     this.user = result.dataResponseUser
     if(this.userInfo){
