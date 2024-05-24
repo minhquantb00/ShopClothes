@@ -8,6 +8,7 @@ using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_U
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductDetail;
 using ShopClothes.Application.UseCases.Implements.Product_UseCase.AdminProduct_UseCase.CreateProductImage;
 using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.CreateProductType;
+using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.UpdateProductType;
 
 namespace ShopClothes.Api.Controllers
 {
@@ -66,6 +67,19 @@ namespace ShopClothes.Api.Controllers
         public async Task<IActionResult> CreateProductType([FromBody] CreateProductTypeUseCaseInput input)
         {
             var useCase = _serviceProvider.GetService<IUseCase<CreateProductTypeUseCaseInput, CreateProductTypeUseCaseOutput>>();
+            var result = await useCase.ExcuteAsync(input);
+            if (!result.Succeeded)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPut]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> UpdateProductType([FromBody] UpdateProductTypeUseCaseInput input)
+        {
+            var useCase = _serviceProvider.GetService<IUseCase<UpdateProductTypeUseCaseInput, UpdateProductTypeUseCaseOutput>>();
             var result = await useCase.ExcuteAsync(input);
             if (!result.Succeeded)
             {

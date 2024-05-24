@@ -18,6 +18,7 @@ using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.GetProdu
 using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.MappingProductReview;
 using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.UpdateProductReview;
 using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.CreateProductType;
+using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.UpdateProductType;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ConfirmCreateNewPasswordUser;
@@ -58,6 +59,7 @@ builder.Services.AddScoped<IUseCase<GetProductReviewUseCaseInput, GetProductRevi
 builder.Services.AddScoped<IUseCaseGetById<int, GetProductReviewByIdUseCaseOutput>, GetProductReviewByIdUseCase>();
 builder.Services.AddScoped<IUseCase<UpdateProductReviewUseCaseInput, UpdateProductReviewUseCaseOutput>, UpdateProductReviewUseCase>();
 builder.Services.AddScoped<IUseCase<CreateProductTypeUseCaseInput, CreateProductTypeUseCaseOutput>, CreateProductTypeUseCase>();
+builder.Services.AddScoped<IUseCase<UpdateProductTypeUseCaseInput, UpdateProductTypeUseCaseOutput>, UpdateProductTypeUseCase>();
 #endregion
 
 #region Register Repository
