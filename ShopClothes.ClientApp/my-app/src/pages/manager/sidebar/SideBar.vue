@@ -1,6 +1,6 @@
 <template>
   <v-card
-    style="height: 100%; border-radius: 0"
+    style="height: 100%; border-radius: 0; background-color: white;"
     color="grey-lighten-3"
     max-width="100%"
   >
@@ -97,25 +97,47 @@
       </v-app-bar>
 
       <v-navigation-drawer
-        v-model="drawer"
-        :location="$vuetify.display.mobile ? 'bottom' : undefined"
-        temporary
-        style="height: 100%"
-      >
-        <!-- <v-list :items="items"></v-list> -->
-        <v-list style="padding: 0" v-for="item in items" :key="item">
-          <div class="item-nav">
-            <v-list-item>
-              <div class="d-flex align-items-center;" style="cursor:pointer">
-                <v-icon class="mr-4">{{ item.icon }}</v-icon>
-                <h5 style="margin-bottom: 0">{{ item.title }}</h5>
-              </div>
-            </v-list-item>
+    v-model="drawer"
+    :location="$vuetify.display.mobile ? 'bottom' : undefined"
+    temporary
+    style="height: 100%;"
+    class="set-color"
+  >
+    <div style="padding: 0">
+      <router-link routerLinkActive="active-link" class="set-router" to="/warehouse-management">
+        <div class="item-nav">
+          <div class="d-flex align-items-center" style="cursor:pointer">
+            <v-icon class="mr-4">mdi-warehouse</v-icon>
+            <h5 style="margin-bottom: 0">Quản lý kho hàng</h5>
           </div>
-        </v-list>
-      </v-navigation-drawer>
-
-      <v-main style="height: 100%"> </v-main>
+        </div>
+      </router-link>
+      <router-link routerLinkActive="active-link" class="set-router" to="/product-management">
+        <div class="item-nav">
+          <div class="d-flex align-items-center" style="cursor:pointer">
+            <v-icon class="mr-4">mdi-tshirt-crew</v-icon>
+            <h5 style="margin-bottom: 0">Quản lý sản phẩm</h5>
+          </div>
+        </div>
+      </router-link>
+      <router-link routerLinkActive="active-link" class="set-router" to="/delivery-management">
+        <div class="item-nav">
+          <div class="d-flex align-items-center" style="cursor:pointer">
+            <v-icon class="mr-4">mdi-truck-delivery</v-icon>
+            <h5 style="margin-bottom: 0">Quản lý giao hàng</h5>
+          </div>
+        </div>
+      </router-link>
+      <router-link routerLinkActive="active-link" class="set-router" to="/employee-management">
+        <div class="item-nav">
+          <div class="d-flex align-items-center" style="cursor:pointer">
+            <v-icon class="mr-4">mdi-account-settings</v-icon>
+            <h5 style="margin-bottom: 0">Quản lý nhân viên</h5>
+          </div>
+        </div>
+      </router-link>
+    </div>
+  </v-navigation-drawer>
     </v-layout>
   </v-card>
 </template>
@@ -124,7 +146,7 @@
 import { authApi } from "../../../apis/Auth/authApi";
 export default {
   data: () => ({
-    drawer: false,
+    drawer: true,
     group: null,
     user: {},
     menu: false,
@@ -181,7 +203,7 @@ export default {
 
   watch: {
     group() {
-      this.drawer = false;
+      this.drawer = true;
     },
   },
 };
@@ -189,9 +211,19 @@ export default {
 
 <style scoped>
 .item-nav{
-  padding: 12px 4px;
+  padding: 12px 18px;
 }
 .item-nav:hover{
-  background-color: rgb(185, 184, 184);
+  background-color: rgb(201, 199, 199);
+}
+.set-router{
+  text-decoration: none;
+  padding: 0px 16px;
+  color: black;
+  background-color: white !important
+}
+.active-link {
+  background-color: #007bff; /* Màu nền bạn muốn sử dụng */
+  color: white; /* Màu chữ bạn muốn sử dụng */
 }
 </style>

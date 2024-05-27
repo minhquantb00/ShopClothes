@@ -50,10 +50,12 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.LoginUser
                 if (!checkPassword)
                 {
                     resultOuput.Errors = new string[] { "Mật khẩu không chính xác" };
+                    return resultOuput;
                 }
                 if (user.UserStatus.ToString().Equals("UnActivated"))
                 {
                     resultOuput.Errors = new string[] { "Tài khoản của người dùng chưa được kích hoạt" };
+                    return resultOuput;
                 }
                 return new LoginUserUseCaseOutput
                 {

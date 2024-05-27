@@ -1,5 +1,5 @@
 <template>
-  <SideBar />
+  <SideBar style="background-color: white;"/>
 </template>
 
 <script>
