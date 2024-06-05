@@ -14,13 +14,13 @@ namespace ShopClothes.Application.UseCases.Implements.User_UseCase.GetUser
         {
             return new GetUserUseCaseDataResponse
             {
-                AvatarUrl = user.AvatarUrl,
-                Email = user.Email,
-                FullName = user.FullName,
-                Gender = user.Gender.ToString(),
-                PhoneNumber = user.PhoneNumber,
-                Point = user.Point,
-                UserStatus = user.UserStatus.ToString()
+                AvatarUrl = user.AvatarUrl != "" ? user.AvatarUrl : "",
+                Email = user.Email != "" ? user.Email : "",
+                FullName = user.FullName != "" ? user.FullName : "",
+                Gender = user.Gender != null ? user.Gender.ToString() : null,
+                PhoneNumber = user.PhoneNumber != "" ? user.PhoneNumber : "",
+                Point = user.Point != 0 ? user.Point : 0,
+                UserStatus = user.UserStatus != null ? user.UserStatus.ToString() : null
             };
         }
     }

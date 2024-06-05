@@ -18,6 +18,8 @@ using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.GetProdu
 using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.MappingProductReview;
 using ShopClothes.Application.UseCases.Implements.ProductReview_UseCase.UpdateProductReview;
 using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.CreateProductType;
+using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.DataProductType;
+using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.GetProductTypeById;
 using ShopClothes.Application.UseCases.Implements.ProductType_UseCase.UpdateProductType;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.AuthenticateUser;
 using ShopClothes.Application.UseCases.Implements.User_UseCase.ChangePasswordUser;
@@ -60,6 +62,7 @@ builder.Services.AddScoped<IUseCaseGetById<int, GetProductReviewByIdUseCaseOutpu
 builder.Services.AddScoped<IUseCase<UpdateProductReviewUseCaseInput, UpdateProductReviewUseCaseOutput>, UpdateProductReviewUseCase>();
 builder.Services.AddScoped<IUseCase<CreateProductTypeUseCaseInput, CreateProductTypeUseCaseOutput>, CreateProductTypeUseCase>();
 builder.Services.AddScoped<IUseCase<UpdateProductTypeUseCaseInput, UpdateProductTypeUseCaseOutput>, UpdateProductTypeUseCase>();
+builder.Services.AddScoped<IUseCaseGetById<int, GetProductTypeByIdUseCaseOutput>, GetProductTypeByIdUseCase>();
 #endregion
 
 #region Register Repository
@@ -88,6 +91,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<GetUserUseCaseMapping>();
 builder.Services.AddScoped<GetProductUseCaseMappingProduct>();
 builder.Services.AddScoped<ProductReviewConverter>();
+builder.Services.AddScoped<ProductTypeConverter>();
 #endregion
 builder.Services.AddCors(options =>
 {

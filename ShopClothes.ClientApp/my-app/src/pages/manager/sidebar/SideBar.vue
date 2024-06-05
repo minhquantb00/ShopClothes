@@ -226,4 +226,7 @@ export default {
   background-color: #007bff; /* Màu nền bạn muốn sử dụng */
   color: white; /* Màu chữ bạn muốn sử dụng */
 }
+v-navigation-drawer .v-navigation-drawer__scrim{
+  background-color: white;
+}
 </style>

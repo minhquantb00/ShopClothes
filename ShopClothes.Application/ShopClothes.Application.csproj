@@ -42,9 +42,6 @@
 
   <ItemGroup>
     <Folder Include="UseCases\Implements\Cart_UseCase\" />
-    <Folder Include="UseCases\Implements\ProductType_UseCase\GetProductType\" />
-    <Folder Include="UseCases\Implements\ProductType_UseCase\GetProductTypeById\" />
-    <Folder Include="UseCases\Implements\ProductType_UseCase\UpdateProductType\" />
   </ItemGroup>
 
 </Project>
